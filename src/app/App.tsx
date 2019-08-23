@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/logo.svg';
+// import './App.css';
+import Sidebar from './components/Sidebar';
+import styled from 'styled-components';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Parent>
+      <Sidebar />
+      <Body>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,9 +21,20 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </Body>
+    </Parent>
   );
 }
+
+const Parent = styled.div`
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+`
+
+const Body = styled.div`
+  background-color: whitesmoke;
+  flex: 1;
+`
 
 export default App;
