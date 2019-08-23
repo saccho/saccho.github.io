@@ -9,14 +9,14 @@ type Props = {
 
 const ImageLink: React.FC<Props> = (props) => {
   return(
-    <a
+    <Link
       className={props.className}
       href={props.href}
       target="_blank"
       rel="noopener noreferrer"
     >
       <Img src={props.iconURL} />
-    </a>
+    </Link>
   );
 }
 
@@ -24,7 +24,10 @@ const ImageLink: React.FC<Props> = (props) => {
 const Img = styled.img`
   width: 17px;
   height: 17px;
-  margin: 0 10px;
+`
+
+const Link = styled.a`
+  margin: 0 20px 0 0;
 `
 
 export default ImageLink;
