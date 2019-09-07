@@ -4,10 +4,10 @@ import ImageLink from '../components/ImageLink';
 import Experience from '../components/Experience';
 import ProfileCard from '../components/ProfileCard';
 import itsme from '../../assets/itsme.jpg';
-import twitter from '../../assets/twitter.png';
-import github from '../../assets/github.png';
-import kaggle from '../../assets/kaggle.png';
-import signate from '../../assets/signate.png';
+import twitter from '../../assets/icons/twitter.png';
+import github from '../../assets/icons/github.png';
+import kaggle from '../../assets/icons/kaggle.png';
+import signate from '../../assets/icons/signate.png';
 
 const Profile: React.FC = () => {
   return(
