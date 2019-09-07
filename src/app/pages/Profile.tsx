@@ -29,6 +29,11 @@ const Profile: React.FC = () => {
         <Description>
           <ProfileCard title='EXPERIENCES'>
             <Experience
+              date='Apr. 2019 - present'
+              name='IEEE Shin-etsu Section Student Branch'
+              status='Vice-Chair'
+            />
+            <Experience
               date='Jun 2019 - present'
               name='Fuller, Inc.'
               status='Part-time Job (Android Engineer)'
