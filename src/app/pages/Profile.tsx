@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ImageLink from '../components/ImageLink';
 import Experience from '../components/Experience';
 import ProfileCard from '../components/ProfileCard';
+import Skills from '../components/Skills';
 import itsme from '../../assets/itsme.jpg';
 import twitter from '../../assets/icons/twitter.png';
 import github from '../../assets/icons/github.png';
@@ -66,26 +67,7 @@ const Profile: React.FC = () => {
         </Description>
         <Description>
           <ProfileCard title='SKILLS'>
-            Python
-            MATLAB
-            Kotlin
-            Go
-            JavaScript
-            TypeScript
-            HTML5
-            CSS3
-
-            Git / Github
-            Flask
-            Vue.js
-            React
-            Node.js
-            Firestore
-
-            Machine Learning
-            Deep Learning
-            Blockchain
-
+            <Skills />
           </ProfileCard>
         </Description>
       </DescriptionWrapper>
