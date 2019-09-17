@@ -5,6 +5,7 @@ import Experience from '../components/Experience';
 import ProfileCard from '../components/ProfileCard';
 import Skills from '../components/Skills';
 import Conference from '../components/Conference';
+import Awards from '../components/Awards';
 import itsme from '../../assets/itsme.jpg';
 import twitter from '../../assets/icons/twitter.png';
 import github from '../../assets/icons/github.png';
@@ -66,7 +67,9 @@ const Profile: React.FC = () => {
           <ProfileCard title='STUDY'>
             <Conference />
           </ProfileCard>
-          <ProfileCard title='AWARDS'></ProfileCard>
+          <ProfileCard title='AWARDS'>
+            <Awards />
+          </ProfileCard>
         </Description>
         <Description>
           <ProfileCard title='SKILLS'>
