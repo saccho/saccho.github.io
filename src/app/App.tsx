@@ -27,6 +27,7 @@ const App: React.FC = () => {
   );
 }
 
+/* Styles */
 const Parent = styled.div`
   min-height: 100vh;
   width: 100vw;
@@ -34,7 +35,6 @@ const Parent = styled.div`
 `
 
 const Body = styled.div`
-  background-color: whitesmoke;
   flex: 1;
 `
 
