@@ -89,12 +89,12 @@ const Profile: React.FC = () => {
 
 /* Styles */
 const HeaderImg = styled.div`
-  height: 75vh;
+  height: calc(100vh - 190px);
   background-image: url(${(props: StyleProps) => props.headerUrl});
   background-position: top right;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 83% auto;
+  background-size: calc(100vw - 220px);
 `
 
 const AboutMe = styled.div`
