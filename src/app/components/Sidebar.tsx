@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const pages = [
-  {name: "Profile", ref: "https://reactjs.org"},
-  {name: "Works", ref: "https://reactjs.org"},
-  {name: "Contact", ref: "https://reactjs.org"}
+  {name: "Profile", path: "/profile"},
+  {name: "Works", path: "/works"},
+  {name: "Contact", path: "/contact"}
 ]
 
 const Sidebar: React.FC = () => {
@@ -12,12 +13,7 @@ const Sidebar: React.FC = () => {
   const list = []
   for(const i in pages){
     list.push(<li>
-      <PageLink
-        className={pages[i].name}
-        href={pages[i].ref}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <PageLink to={pages[i].path}>
         {pages[i].name}
       </PageLink>
     </li>)
@@ -25,7 +21,7 @@ const Sidebar: React.FC = () => {
 
   return(
     <Wrapper>
-      <Title href={pages[0].ref}>Satoru Yasukawa's Portfolio</Title>
+      <Title to="/">Satoru Yasukawa's Portfolio</Title>
       <PageList>
         {list}
       </PageList>
@@ -45,7 +41,7 @@ const Wrapper = styled.div`
   text-align: center;
 `
 
-const Title = styled.a`
+const Title = styled(Link)`
   display: inline-block;
   color: #212121;
   font-size: 20px;
@@ -58,7 +54,7 @@ const PageList = styled.ul`
   list-style: none;
 `
 
-const PageLink = styled.a`
+const PageLink = styled(Link)`
   font-size: 17px;
   padding: 5px;
   margin: 5px 0;

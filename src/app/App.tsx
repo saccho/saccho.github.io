@@ -1,22 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import header from '../assets/header.jpg';
 import Sidebar from './components/Sidebar';
+import ScrollToTop from './components/ScrollToTop'
+import Home from './pages/Home';
 import Profile from './pages/Profile';
-
-type StyleProps = {
-  headerUrl: string;
-}
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App: React.FC = () => {
   return (
-    <Parent>
-      <Sidebar />
-      <Body>
-        <HeaderImg headerUrl={header} />
-        <Profile />
-      </Body>
-    </Parent>
+    <Router>
+      <Parent>
+        <Sidebar />
+        <Body>
+          <ScrollToTop>
+            <Route exact path="/" component={Home} />
+            <Route path="/profile" component={Profile} />
+          </ScrollToTop>
+        </Body>
+      </Parent>
+    </Router>
   );
 }
 
@@ -25,15 +27,6 @@ const Parent = styled.div`
   min-height: 100vh;
   width: 100vw;
   display: flex;
-`
-
-const HeaderImg = styled.div`
-  height: calc(100vh - 190px);
-  background-image: url(${(props: StyleProps) => props.headerUrl});
-  background-position: top right;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: calc(100vw - 220px);
 `
 
 const Body = styled.div`
