@@ -22,6 +22,7 @@ const Parent = styled.div`
 `
 
 const Body = styled.div`
+  background-color: #FAFAFA;
   flex: 1;
 `
 
