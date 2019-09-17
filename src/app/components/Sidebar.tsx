@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const pages = [
-  {name: "Profile", path: "/profile"},
+  {name: "Profile", path: "/"},
   {name: "Works", path: "/works"},
   {name: "Contact", path: "/contact"}
 ]

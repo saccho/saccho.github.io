@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Sidebar from './components/Sidebar';
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home';
-import Profile from './pages/Profile';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -14,7 +13,6 @@ const App: React.FC = () => {
         <Body>
           <ScrollToTop>
             <Route exact path="/" component={Home} />
-            <Route path="/profile" component={Profile} />
           </ScrollToTop>
         </Body>
       </Parent>
