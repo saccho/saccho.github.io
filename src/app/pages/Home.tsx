@@ -10,7 +10,9 @@ type StyleProps = {
 const Home: React.FC = () => {
   return(
     <div>
-      <HeaderImg headerUrl={header} />
+      <div>
+        <HeaderImg headerUrl={header} />
+      </div>
       <Profile />
     </div>
   );
@@ -18,7 +20,7 @@ const Home: React.FC = () => {
 
 /* Styles */
 const HeaderImg = styled.div`
-  height: calc(100vh - 190px);
+  height: calc((100vw - 220px)*(393/1000));
   background-image: url(${(props: StyleProps) => props.headerUrl});
   background-position: top right;
   background-attachment: fixed;
