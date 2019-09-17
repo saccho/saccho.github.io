@@ -91,11 +91,11 @@ const Conference: React.FC = () => {
   return(
     <Wrapper>
       <Conf>
-        International conference
+        International Conference
         {iConfList}
       </Conf>
       <Conf>
-        Domestic conference (Japanese)
+        Domestic Conference (Japanese)
         {dConfList}
       </Conf>
       <Conf>
