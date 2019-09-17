@@ -1,7 +1,5 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
-// import './App.css';
-import Sidebar from './components/Sidebar';
 import styled from 'styled-components';
 import Sidebar from './components/Sidebar';
 import Profile from './pages/Profile';
