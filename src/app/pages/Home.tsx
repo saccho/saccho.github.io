@@ -10,9 +10,7 @@ type StyleProps = {
 const Home: React.FC = () => {
   return(
     <div>
-      <div>
-        <HeaderImg headerUrl={header} />
-      </div>
+      <HeaderImg headerUrl={header} />
       <Profile />
     </div>
   );
