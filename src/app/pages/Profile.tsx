@@ -85,6 +85,7 @@ const Profile: React.FC = () => {
 const AboutMe = styled.div`
   height: 150px;
   display: flex;
+  justify-content: center;
   padding: 20px 0 20px 10px;
 `
 
