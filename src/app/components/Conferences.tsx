@@ -52,7 +52,7 @@ const conferences = {
   ]
 }
 
-const Conference: React.FC = () => {
+const Conferences: React.FC = () => {
   const iConfList = []
   const dConfList = []
   const dTechList = []
@@ -123,4 +123,4 @@ const ConfLi = styled.li`
   width: 100%;
 `
 
-export default Conference;
+export default Conferences;

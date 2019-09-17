@@ -4,7 +4,7 @@ import ImageLink from '../components/ImageLink';
 import Experience from '../components/Experience';
 import ProfileCard from '../components/ProfileCard';
 import Skills from '../components/Skills';
-import Conference from '../components/Conference';
+import Conferences from '../components/Conferences';
 import Awards from '../components/Awards';
 import itsme from '../../assets/itsme.jpg';
 import twitter from '../../assets/icons/twitter.png';
@@ -65,7 +65,7 @@ const Profile: React.FC = () => {
             />
           </ProfileCard>
           <ProfileCard title='STUDY'>
-            <Conference />
+            <Conferences />
           </ProfileCard>
           <ProfileCard title='AWARDS'>
             <Awards />
