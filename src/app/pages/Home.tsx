@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import header from '../../assets/header.jpg';
+import Footer from '../components/Footer';
 import Profile from './Profile';
 
 type StyleProps = {
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
     <div>
       <HeaderImg headerUrl={header} />
       <Profile />
+      <Footer />
     </div>
   );
 }
