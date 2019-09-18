@@ -29,7 +29,7 @@ const ItsMe: React.FC = () => {
 
 /* Styles */
 const Wrapper = styled.div`
-  height: calc(100vh - (100vw - 220px)*(393/1000));
+  height: calc(100vh - (100vw - 80px)*(393/1000));
   display: flex;
   justify-content: center;
   align-items: center;
