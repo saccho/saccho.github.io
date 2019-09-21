@@ -82,8 +82,8 @@ const PageUl = styled.ul`
 `
 
 const PageLink = styled(Link)`
-  padding: 10px;
-  margin: 5px 0;
+  width: 100%;
+  padding: 15px 0;
   color: #212121;
   text-decoration: none;
   display: inline-block;
