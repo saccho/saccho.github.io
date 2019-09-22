@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/icons/logo.png';
+import logo from '../../assets/icons/logo2.png';
 import profileIcon from '../../assets/icons/profile.png';
 import worksIcon from '../../assets/icons/works.png';
 import contactIcon from '../../assets/icons/contact.png';
