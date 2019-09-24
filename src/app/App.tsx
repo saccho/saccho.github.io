@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import Sidebar from './components/Sidebar';
 import MiniSidebar from './components/MiniSidebar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Works from './pages/Works';
@@ -18,7 +18,7 @@ const App: React.FC = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/works" component={Works} />
           </ScrollToTop>
-          <Footer />
+          {/* <Footer /> */}
         </Body>
       </Parent>
     </Router>
