@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
 
 /* Styles */
 const Wrapper = styled.div`
-  height: calc(100vh - 105px);
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;

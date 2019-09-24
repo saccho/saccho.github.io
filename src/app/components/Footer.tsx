@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   position: sticky;
   bottom: 0;
   width: 100vw;
-  height: 55px;
+  height: 50px;
   text-align: center;
   @media only screen and (min-width: 1025px) {
     display: none;
@@ -66,7 +66,7 @@ const PageImg = styled.img`
 `
 
 const PageName = styled.p`
-  margin: 4px 0 0 0;
+  margin: 0;
   font-size: 12px;
 `
 
