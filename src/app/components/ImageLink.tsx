@@ -27,7 +27,7 @@ const Img = styled.img`
 `
 
 const Link = styled.a`
-  margin: 0 20px 0 0;
+  margin: 0 10px;
 `
 
 export default ImageLink;
