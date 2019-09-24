@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: 1024px) {
-    height: calc(100vh - 100vw*(393/1000));
+    height: calc(100vh - 100vw*(393/1000) - 100px);
   }
   @media only screen and (max-width: 480px) {
     justify-content: start;
