@@ -6,6 +6,7 @@ import MiniSidebar from './components/MiniSidebar';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Works from './pages/Works';
+import Contact from './pages/Contact';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <ScrollToTop>
             <Route exact path="/" component={Home} />
             <Route exact path="/works" component={Works} />
+            <Route exact path="/contact" component={Contact} />
           </ScrollToTop>
           {/* <Footer /> */}
         </Body>
