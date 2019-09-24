@@ -68,10 +68,18 @@ const Profile: React.FC = () => {
 const DescriptionWrapper = styled.div`
   display: flex;
   text-align: left;
+  @media only screen and (max-width: 1024px) {
+    display: inline-block;
+  }
 `
 
 const Description = styled.div`
   width: 50%;
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `
+
+
 
 export default Profile;

@@ -27,6 +27,11 @@ const HeaderImg = styled.div`
   /* background-size: calc(100vw - 220px); */
   background-size: calc(100vw - 80px);
   filter: grayscale(100%);
+  @media only screen and (max-width: 1024px) {
+    background-position: 0 50px;
+    height: calc(100vw * (393/1000));
+    background-size: 100vw;
+  }
 `
 
 export default Home;

@@ -45,11 +45,17 @@ const Wrapper = styled.div`
   width: 80px;
   height: 100vh;
   text-align: center;
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 
 const Title = styled(Link)`
   display: inline-block;
   margin-top: 30px;
+  @media only screen and (max-height: 330px) {
+    margin-top: 10px;
+  }
 `
 
 const TitleImg = styled.img`

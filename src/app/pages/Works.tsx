@@ -74,6 +74,7 @@ const Works: React.FC = () =>{
 
 /* Styles */
 const Wrapper = styled.div`
+  margin: 15px 0;
   text-align: center;
 `
 
