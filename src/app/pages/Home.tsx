@@ -28,6 +28,7 @@ const HeaderImg = styled.div`
   background-repeat: no-repeat;
   /* background-size: calc(100vw - 220px); */
   background-size: calc(100vw - 80px);
+  filter: grayscale(100%);
 `
 
 export default Home;
