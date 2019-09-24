@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 // import Sidebar from './components/Sidebar';
 import MiniSidebar from './components/MiniSidebar';
+import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import Works from './pages/Works';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App: React.FC = () => {
@@ -14,7 +16,9 @@ const App: React.FC = () => {
         <Body>
           <ScrollToTop>
             <Route exact path="/" component={Home} />
+            <Route exact path="/works" component={Works} />
           </ScrollToTop>
+          <Footer />
         </Body>
       </Parent>
     </Router>
