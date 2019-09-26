@@ -40,7 +40,8 @@ const Skill: React.FC<Props> = (props) => {
 
 /* Styles */
 const Circle = styled.div`
-  display: flex;
+  display: inline-flex;
+  vertical-align: top;
   align-items: center;
   justify-content: center;
   background-color: #fff;
