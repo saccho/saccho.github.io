@@ -4,44 +4,76 @@ import styled from 'styled-components';
 type Props = {
   name: string;
   level: number;
+  color: string;
 }
 
-type StyleProps = {
-  width: number;
+type CircleProps = {
+  rgba: string;
+}
+
+type NameProps = {
+  rgb: string;
+}
+
+type WaveProps = {
+  top: number;
+  color: string;
 }
 
 const Skill: React.FC<Props> = (props) => {
-  const width = props.level / 6 * 100
+  const top = 100 - (props.level / 6) * 100
+
+  const red = parseInt(props.color.substring(1, 3), 16)
+  const green = parseInt(props.color.substring(3, 5), 16)
+  const blue = parseInt(props.color.substring(5, 7), 16)
+
+  const rgb = `rgb(${red}, ${green}, ${blue})`
+  const rgba = `rgb(${red}, ${green}, ${blue}, 0.4)`
 
   return(
-    <Wrapper>
-      <Bar width={width}>
-        {props.name}
-      </Bar>
-    </Wrapper>
+    <Circle rgba={rgba}>
+      <Name rgb={rgb}>{props.name}</Name>
+      <Wave color={props.color} top={top}/>
+    </Circle>
   );
 }
 
-const Wrapper = styled.div`
-  background: #EEEEEE;
-  width: 95%;
+/* Styles */
+const Circle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px ${(props: CircleProps) => props.rgba};
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
 `
 
-const Bar = styled(Wrapper)`
-  width: ${(props: StyleProps) => props.width}%;
-  background: linear-gradient(to right, #BBDEFB 0%, #B2EBF2 100%);
-  @keyframes sizeScale {
-    from {
-      width: 0%;
-    }
+const Name = styled.p`
+  color: ${(props: NameProps) => props.rgb};
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+`
+
+const Wave = styled.div`
+  position: absolute;
+  top: ${(props: WaveProps) => props.top}%;
+  right: -60%;
+  opacity: .3;
+  background: ${(props: WaveProps) => props.color};
+  width: 200px;
+  height: 200px;
+  border-radius: 45%;
+  animation: drift 10s infinite linear;
+  @keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
   }
-  animation: sizeScale 1s ease;
-  white-space: nowrap;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 5px;
-  height: 21px;
+  z-index: 0;
 `
 
 export default Skill;
