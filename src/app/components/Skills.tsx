@@ -2,7 +2,7 @@ import React from 'react';
 import Skill from './Skill';
 import styled from 'styled-components';
 
-const defaultColor = '#757575'
+const defaultColor = '#424242'
 const skills = {
   languages: [
     {name: 'Python', level: 5, color: '#3572A5'},
