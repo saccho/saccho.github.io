@@ -1,22 +1,48 @@
 import React from 'react';
 import styled from 'styled-components';
 
+type Language = {
+  name: string;
+  color: string;
+}
+
 type Props = {
   title: string;
   imgSrc: string;
   description: string;
   url: string;
+  languages: Language[];
 }
 
-type StyleProps = {
+type ImgSrcProps = {
   src: string;
 }
 
+type StyleColorProps = {
+  color: string;
+}
+
 const WorkCard: React.FC<Props> = (props) => {
+  const langList = []
+  for(const i in props.languages) {
+    const red = parseInt(props.languages[i].color.substring(1, 3), 16)
+    const green = parseInt(props.languages[i].color.substring(3, 5), 16)
+    const blue = parseInt(props.languages[i].color.substring(5, 7), 16)
+    const rgba = `rgb(${red}, ${green}, ${blue}, .8)`
+    langList.push(
+      <LangLi>
+        <LangStyle color={rgba}/>
+        <LangName>{props.languages[i].name}</LangName>
+      </LangLi>
+    )
+  }
   return(
     <WorkLink href={props.url} target='_blank' rel='noopener noreferrer'>
       <Card>
         <Title>{props.title}</Title>
+        <LangUl>
+          {langList}
+        </LangUl>
         <ImgWrapper>
           <Img src={props.imgSrc}></Img>
         </ImgWrapper>
@@ -44,17 +70,45 @@ const Card = styled.div`
   transition: .2s;
   &:hover{
     border: 1px solid #4FC3F7;
-    color: #03A9F4
+    color: #03A9F4;
   }
   &:hover Img{
-    /* filter: grayscale(0%); */
     transform: scale(1.05);
+  }
+  &:hover LangUl{
+    border-top: 1px solid #4FC3F7;
   }
 `
 
 const Title = styled.h3`
-  margin: 5px;
   position: relative;
+  padding: 5px 5px 3px 5px;
+  margin: 0;
+`
+
+const LangUl = styled.ul`
+  padding: 0 0 7px 5px;
+  margin: 0;
+  transition: .2s;
+`
+
+const LangLi = styled.li`
+  padding-right: 2px;
+  display: inline-block;
+`
+
+const LangStyle = styled.span`
+  display: inline-block;
+  background-color: ${(props: StyleColorProps) => props.color};
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 0 3px;
+`
+
+const LangName = styled.span`
+  font-size: 12px;
+  color: #424242;
 `
 
 const ImgWrapper = styled.div`
@@ -63,19 +117,20 @@ const ImgWrapper = styled.div`
 
 const Img = styled.img`
   position: relative;
-  src: url(${(props: StyleProps) => props.src});
+  src: url(${(props: ImgSrcProps) => props.src});
   background-repeat: no-repeat;
   object-position: 50% 0;
   object-fit: cover;
   width: 300px;
   height: calc(300px * 9/16);
-  /* filter: grayscale(100%); */
   transition: .2s;
 `
 
 const Desc = styled.p`
   word-wrap: break-word;
-  margin: 5px;
+  height: 50px;
+  padding: 5px;
+  margin: 0;
 `
 
 export default WorkCard;
