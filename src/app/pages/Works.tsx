@@ -17,7 +17,7 @@ const languages = {
   },
   matlab: {
     name: 'MATLAB',
-    color: '#MATLAB'
+    color: '#E16737'
   },
   kotlin: {
     name: 'Kotlin',
