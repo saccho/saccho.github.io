@@ -26,6 +26,10 @@ const Img = styled.img`
 
 const Link = styled.a`
   margin: 0 10px;
+  transition: .2s;
+  &:hover{
+    opacity: .7;
+  }
 `
 
 export default SNSLink;
