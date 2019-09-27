@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import MiniSidebar from './components/MiniSidebar';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import Home from './pages/Home';
-import Works from './pages/Works';
-import Contact from './pages/Contact';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react'
+import styled from 'styled-components'
+import MiniSidebar from './components/MiniSidebar'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
+import Home from './pages/Home'
+import Works from './pages/Works'
+import Contact from './pages/Contact'
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import { background, mainText } from './data/colors/elements'
 import { Color } from './data/types/elements'
 
@@ -27,7 +27,7 @@ const App: React.FC = () => {
         </Body>
       </Parent>
     </Router>
-  );
+  )
 }
 
 /* Styles */

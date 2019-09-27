@@ -1,6 +1,6 @@
-import React from 'react';
-import Skill from './Skill';
-import styled from 'styled-components';
+import React from 'react'
+import Skill from './Skill'
+import styled from 'styled-components'
 import skills from '../data/values/skills'
 
 const Skills: React.FC = () => {

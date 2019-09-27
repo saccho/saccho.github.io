@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import { Color } from '../data/types/elements'
 
 type Props = {
-  name: string;
-  level: number;
-  color: string;
+  name: string
+  level: number
+  color: string
 }
 
 type WaveProps = Color & {
-  top: number;
+  top: number
 }
 
 const Skill: React.FC<Props> = (props) => {
@@ -27,7 +27,7 @@ const Skill: React.FC<Props> = (props) => {
       <Name color={rgb}>{props.name}</Name>
       <Wave color={props.color} top={top}/>
     </Circle>
-  );
+  )
 }
 
 /* Styles */

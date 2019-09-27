@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import awardsList from '../data/values/awards'
 
 const Awards: React.FC = () => {
@@ -36,7 +36,7 @@ const Awards: React.FC = () => {
         {signateList}
       </Aw>
     </Wrapper>
-  );
+  )
 }
 
 /* Styles */

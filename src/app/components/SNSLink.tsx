@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 type Props = {
-  href: string;
-  iconURL: string;
+  href: string
+  iconURL: string
 }
 
 const SNSLink: React.FC<Props> = (props) => {
@@ -15,7 +15,7 @@ const SNSLink: React.FC<Props> = (props) => {
     >
       <Img src={props.iconURL} />
     </Link>
-  );
+  )
 }
 
 /* Styles */

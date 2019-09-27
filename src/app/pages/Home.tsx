@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import header from '../../assets/header.jpg';
-import Profile from './Profile';
+import React from 'react'
+import styled from 'styled-components'
+import header from '../../assets/header.jpg'
+import Profile from './Profile'
 import { Src } from '../data/types/elements'
 
 const Home: React.FC = () => {
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <HeaderImg src={header} />
       <Profile />
     </div>
-  );
+  )
 }
 
 /* Styles */

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import conferences from '../data/values/study'
 
 const Conferences: React.FC = () => {
@@ -53,7 +53,7 @@ const Conferences: React.FC = () => {
         {dTechList}
       </Conf>
     </Wrapper>
-  );
+  )
 }
 
 /* Styles */

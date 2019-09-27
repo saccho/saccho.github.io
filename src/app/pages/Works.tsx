@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import WorkCard from '../components/WorkCard';
+import React from 'react'
+import styled from 'styled-components'
+import WorkCard from '../components/WorkCard'
 import works from '../data/values/works'
 
 const Works: React.FC = () =>{

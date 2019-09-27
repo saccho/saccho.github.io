@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import contact from '../data/values/contact'
 import { mainText, linkTextHover } from '../data/colors/elements'
 import { Color, Src } from '../data/types/elements'
 
 type TwitterLinkColors = Color & {
-  textHover: string;
+  textHover: string
 }
 
 const Contact: React.FC = () => {

@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import ItsMe from '../components/ItsMe';
-import ProfileCard from '../components/ProfileCard';
-import Experiences from '../components/Experiences';
-import Education from '../components/Education';
-import Skills from '../components/Skills';
-import Conferences from '../components/Conferences';
-import Awards from '../components/Awards';
+import React from 'react'
+import styled from 'styled-components'
+import ItsMe from '../components/ItsMe'
+import ProfileCard from '../components/ProfileCard'
+import Experiences from '../components/Experiences'
+import Education from '../components/Education'
+import Skills from '../components/Skills'
+import Conferences from '../components/Conferences'
+import Awards from '../components/Awards'
 
 const Profile: React.FC = () => {
   return(
@@ -34,7 +34,7 @@ const Profile: React.FC = () => {
         </Description>
       </DescriptionWrapper>
     </div>
-  );
+  )
 }
 
 /* Styles */

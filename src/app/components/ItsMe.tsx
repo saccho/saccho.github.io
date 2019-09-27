@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import SNSLink from './SNSLink';
+import React from 'react'
+import styled from 'styled-components'
+import SNSLink from './SNSLink'
 import my from '../data/values/myProfile'
 
 const ItsMe: React.FC = () => {
@@ -25,7 +25,7 @@ const ItsMe: React.FC = () => {
         </Bio>
       </AboutMe>
     </Wrapper>
-  );
+  )
 }
 
 /* Styles */

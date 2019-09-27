@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/icons/logo2.png';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import logo from '../../assets/icons/logo2.png'
 import { barBackground, mainText } from '../data/colors/elements'
 import { Color, Src } from '../data/types/elements'
 
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         <Name>Satoru Yasukawa's<br/>Portfolio</Name>
       </Title>
     </Wrapper>
-  );
+  )
 }
 
 /* Styles */

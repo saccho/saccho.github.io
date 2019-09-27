@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import { subText } from '../data/colors/elements'
 import { Color } from '../data/types/elements'
 
 type Props = {
-  name: string;
-  date: string;
-  status: string;
+  name: string
+  date: string
+  status: string
 }
 
 const Experience: React.FC<Props> = (props) => {
@@ -18,7 +18,7 @@ const Experience: React.FC<Props> = (props) => {
       </ExpList>
       <Status color={subText}>{props.status}</Status>
     </Wrapper>
-  );
+  )
 }
 
 /* Styles */

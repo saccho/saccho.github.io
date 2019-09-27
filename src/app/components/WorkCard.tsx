@@ -1,19 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import { mainText, card, worksCardHover, linkTextHover } from '../data/colors/elements'
 import { Color, Src } from '../data/types/elements'
 
 type Language = {
-  name: string;
-  color: string;
+  name: string
+  color: string
 }
 
 type Props = {
-  title: string;
-  imgSrc: string;
-  description: string;
-  url: string;
-  languages: Language[];
+  title: string
+  imgSrc: string
+  description: string
+  url: string
+  languages: Language[]
 }
 
 type CardColors = {
@@ -49,7 +49,7 @@ const WorkCard: React.FC<Props> = (props) => {
         <Desc>{props.description}</Desc>
       </Card>
     </WorkLink>
-    );
+  )
 }
 
 /* Styles */

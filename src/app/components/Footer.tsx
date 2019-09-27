@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import pages from '../data/values/pages'
 import { barBackground, barBackgroundHover, mainText } from '../data/colors/elements'
 import { Color, Src } from '../data/types/elements'
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         {list}
       </PageUl>
     </Wrapper>
-  );
+  )
 }
 
 /* Styles */
