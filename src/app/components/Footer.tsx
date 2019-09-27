@@ -1,25 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import profileIcon from '../../assets/icons/profile.png';
-import worksIcon from '../../assets/icons/works.png';
-import contactIcon from '../../assets/icons/contact.png';
-
-type StyleProps = {
-  src: string;
-}
-
-const pages = [
-  {name: "Profile", path: "/", iconUrl: profileIcon},
-  {name: "Works", path: "/works", iconUrl: worksIcon},
-  {name: "Contact", path: "/contact", iconUrl: contactIcon}
-]
+import pages from '../data/values/pages'
+import { barBackground, barBackgroundHover, mainText } from '../data/colors/elements'
+import { Color, Src } from '../data/types/elements'
 
 const Footer: React.FC = () => {
   const list = []
   for(const i in pages){
-    list.push(<PageLi>
-      <PageLink to={pages[i].path}>
+    list.push(<PageLi color={barBackgroundHover}>
+      <PageLink to={pages[i].path} color={mainText}>
         <PageImg src={pages[i].iconUrl} />
         <PageName>{pages[i].name}</PageName>
       </PageLink>
@@ -27,7 +17,7 @@ const Footer: React.FC = () => {
   }
 
   return(
-    <Wrapper>
+    <Wrapper color={barBackground}>
       <PageUl>
         {list}
       </PageUl>
@@ -37,7 +27,7 @@ const Footer: React.FC = () => {
 
 /* Styles */
 const Wrapper = styled.div`
-  background-color: #F5F5F5;
+  background-color: ${(props: Color) => props.color};
   position: sticky;
   bottom: 0;
   width: 100vw;
@@ -55,12 +45,12 @@ const PageLi = styled.li`
   display: inline-block;
   transition: background-color .1s;
   &:hover{
-    background-color: #EEEEEE;
+    background-color: ${(props: Color) => props.color};
   }
 `
 
 const PageImg = styled.img`
-  src: url(${(props: StyleProps) => props.src});
+  src: url(${(props: Src) => props.src});
   width: 24px;
   height: 24px;
 `
@@ -80,7 +70,7 @@ const PageUl = styled.ul`
 `
 
 const PageLink = styled(Link)`
-  color: #212121;
+  color: ${(props: Color) => props.color};
   text-decoration: none;
   display: block;
   position: relative;

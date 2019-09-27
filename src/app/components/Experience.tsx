@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { subText } from '../data/colors/elements'
+import { Color } from '../data/types/elements'
 
 type Props = {
   name: string;
@@ -14,7 +16,7 @@ const Experience: React.FC<Props> = (props) => {
         <Name>{props.name}</Name>
         <Date>{props.date}</Date>
       </ExpList>
-      <Status>{props.status}</Status>
+      <Status color={subText}>{props.status}</Status>
     </Wrapper>
   );
 }
@@ -33,7 +35,7 @@ const Status = styled.li`
   margin-top: 5px;
   padding-left: 3%;
   width: 97%;
-  color: #757575;
+  color: ${(props: Color) => props.color};
 `
 
 const Wrapper = styled.ul`

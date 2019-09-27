@@ -1,25 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImageLink from './ImageLink';
-import itsme from '../../assets/itsme.jpg';
-import twitter from '../../assets/icons/twitter.png';
-import github from '../../assets/icons/github.png';
-import kaggle from '../../assets/icons/kaggle.png';
-import signate from '../../assets/icons/signate.png';
+import SNSLink from './SNSLink';
+import my from '../data/values/myProfile'
 
 const ItsMe: React.FC = () => {
+  const snsList = []
+
+  for(const i in my.sns) {
+    snsList.push(
+      <SNSLink href={my.sns[i].href} iconURL={my.sns[i].icon} />
+    )
+  }
+
   return(
     <Wrapper>
       <AboutMe>
-        <MyImg src={itsme} className='itsme' alt='itsme' />
+        <MyImg src={my.icon}/>
         <Bio>
-          <Name>Satoru Yasukawa / 安川 悟</Name>
-          <Status>Student at Niigata University</Status>
+          <Name>{my.name}</Name>
+          <Status>{my.status}</Status>
           <Links>
-            <ImageLink className='twitter' href='https://twitter.com/runn_622v' iconURL={twitter} />
-            <ImageLink className='github' href='https://github.com/saccho' iconURL={github} />
-            <ImageLink className='kaggle' href='https://www.kaggle.com/saccho' iconURL={kaggle} />
-            <ImageLink className='signate' href='https://signate.jp/users/33557/history' iconURL={signate} />
+            {snsList}
           </Links>
         </Bio>
       </AboutMe>

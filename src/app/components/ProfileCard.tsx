@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mainText, card } from '../data/colors/elements'
+import { Color } from '../data/types/elements'
 
 type Props = {
   title: string;
@@ -7,8 +9,8 @@ type Props = {
 
 const ProfileCard: React.FC<Props> = (props) => {
   return(
-    <Card>
-      <Title>{props.title}</Title>
+    <Card color={card}>
+      <Title color={mainText}>{props.title}</Title>
       {props.children}
     </Card>
   );
@@ -16,13 +18,13 @@ const ProfileCard: React.FC<Props> = (props) => {
 
 /* Styles */
 const Title = styled.h3`
-  color: #424242;
+  color: ${(props: Color) => props.color};
   margin: 0;
   position: relative;
 `
 
 const Card = styled.div`
-  border-top: 1px solid #E0E0E0;
+  border-top: 1px solid ${(props: Color) => props.color};
   margin: 0 10px 0 0;
   padding: 10px 0 10px 10px;
 `

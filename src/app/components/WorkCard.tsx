@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mainText, card, worksCardHover, linkTextHover } from '../data/colors/elements'
+import { Color, Src } from '../data/types/elements'
 
 type Language = {
   name: string;
@@ -14,12 +16,10 @@ type Props = {
   languages: Language[];
 }
 
-type ImgSrcProps = {
-  src: string;
-}
-
-type StyleColorProps = {
-  color: string;
+type CardColors = {
+  border: string
+  borderHover: string
+  textHover: string
 }
 
 const WorkCard: React.FC<Props> = (props) => {
@@ -32,13 +32,13 @@ const WorkCard: React.FC<Props> = (props) => {
     langList.push(
       <LangLi>
         <LangStyle color={rgba}/>
-        <LangName>{props.languages[i].name}</LangName>
+        <LangName color={mainText}>{props.languages[i].name}</LangName>
       </LangLi>
     )
   }
   return(
-    <WorkLink href={props.url} target='_blank' rel='noopener noreferrer'>
-      <Card>
+    <WorkLink href={props.url} target='_blank' rel='noopener noreferrer' color={mainText}>
+      <Card border={card} borderHover={worksCardHover} textHover={linkTextHover}>
         <Title>{props.title}</Title>
         <LangUl>
           {langList}
@@ -59,24 +59,21 @@ const WorkLink = styled.a`
   margin: 20px;
   vertical-align: top;
   text-decoration: none;
-  color: #424242;
+  color: ${(props: Color) => props.color};
 `
 
 const Card = styled.div`
   width: 300px;
   height: 300px;
-  border: 1px solid #E0E0E0;
+  border: 1px solid ${(props: CardColors) => props.border};
   border-radius: 3px;
   transition: .2s;
   &:hover{
-    border: 1px solid #4FC3F7;
-    color: #03A9F4;
+    border: 1px solid ${(props: CardColors) => props.borderHover};
+    color: ${(props: CardColors) => props.textHover};
   }
   &:hover Img{
     transform: scale(1.05);
-  }
-  &:hover LangUl{
-    border-top: 1px solid #4FC3F7;
   }
 `
 
@@ -99,7 +96,7 @@ const LangLi = styled.li`
 
 const LangStyle = styled.span`
   display: inline-block;
-  background-color: ${(props: StyleColorProps) => props.color};
+  background-color: ${(props: Color) => props.color};
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -108,7 +105,7 @@ const LangStyle = styled.span`
 
 const LangName = styled.span`
   font-size: 12px;
-  color: #424242;
+  color: ${(props: Color) => props.color};
 `
 
 const ImgWrapper = styled.div`
@@ -117,7 +114,7 @@ const ImgWrapper = styled.div`
 
 const Img = styled.img`
   position: relative;
-  src: url(${(props: ImgSrcProps) => props.src});
+  src: url(${(props: Src) => props.src});
   background-repeat: no-repeat;
   object-position: 50% 0;
   object-fit: cover;

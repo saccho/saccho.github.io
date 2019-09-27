@@ -1,41 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const awards = {
-  study: [
-    {
-      name: '2018 IEICE Shinetsu Branch Conference',
-      award: 'Student Encouragement Award'
-    }
-  ],
-  signate: [
-    {
-      name: '飯田産業 土地の販売価格の推定',
-      award: 'Silver Medal (35th / 593)'
-    }
-  ]
-}
+import awardsList from '../data/values/awards'
 
 const Awards: React.FC = () => {
   const studyList = []
   const signateList = []
 
-  for(const awardIdx in awards.study){
-    const studyAward = awards.study[awardIdx]
+  for(const awardIdx in awardsList.study.awards) {
     studyList.push(
       <AwUl>
         <AwLi>
-          {studyAward.name}: {studyAward.award}
+          {awardsList.study.awards[awardIdx].name}: {awardsList.study.awards[awardIdx].award}
         </AwLi>
       </AwUl>
     )
   }
-  for(const awardIdx in awards.signate){
-    const signateAward = awards.signate[awardIdx]
+  for(const awardIdx in awardsList.signate.awards) {
     signateList.push(
       <AwUl>
         <AwLi>
-          {signateAward.name}: {signateAward.award}
+          {awardsList.signate.awards[awardIdx].name}: {awardsList.signate.awards[awardIdx].award}
         </AwLi>
       </AwUl>
     )
@@ -44,11 +28,11 @@ const Awards: React.FC = () => {
   return(
     <Wrapper>
       <Aw>
-        Study
+        {awardsList.study.description}
         {studyList}
       </Aw>
       <Aw>
-        Signate (Japan Data Science Competition)
+        {awardsList.signate.description}
         {signateList}
       </Aw>
     </Wrapper>

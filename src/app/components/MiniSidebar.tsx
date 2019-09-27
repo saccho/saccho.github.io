@@ -2,25 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo2.png';
-import profileIcon from '../../assets/icons/profile.png';
-import worksIcon from '../../assets/icons/works.png';
-import contactIcon from '../../assets/icons/contact.png';
-
-type StyleProps = {
-  src: string;
-}
-
-const pages = [
-  {name: "Profile", path: "/", iconUrl: profileIcon},
-  {name: "Works", path: "/works", iconUrl: worksIcon},
-  {name: "Contact", path: "/contact", iconUrl: contactIcon}
-]
+import pages from '../data/values/pages'
+import { barBackground, barBackgroundHover, mainText } from '../data/colors/elements'
+import { Color, Src } from '../data/types/elements'
 
 const MiniSidebar: React.FC = () => {
   const list = []
   for(const i in pages){
-    list.push(<PageLi>
-      <PageLink to={pages[i].path}>
+    list.push(<PageLi color={barBackgroundHover}>
+      <PageLink to={pages[i].path} color={mainText}>
         <PageImg src={pages[i].iconUrl} />
         <PageName>{pages[i].name}</PageName>
       </PageLink>
@@ -28,7 +18,7 @@ const MiniSidebar: React.FC = () => {
   }
 
   return(
-    <Wrapper>
+    <Wrapper color={barBackground}>
       <Title to="/"><TitleImg src={logo} /></Title>
       <PageUl>
         {list}
@@ -39,7 +29,7 @@ const MiniSidebar: React.FC = () => {
 
 /* Styles */
 const Wrapper = styled.div`
-  background-color: #F5F5F5;
+  background-color: ${(props: Color) => props.color};
   position: sticky;
   top: 0;
   width: 80px;
@@ -59,7 +49,7 @@ const Title = styled(Link)`
 `
 
 const TitleImg = styled.img`
-  src: url(${(props: StyleProps) => props.src});
+  src: url(${(props: Src) => props.src});
   width: 64px;
   height: 64px;
 `
@@ -67,12 +57,12 @@ const TitleImg = styled.img`
 const PageLi = styled.li`
   transition: background-color .1s;
   &:hover{
-    background-color: #EEEEEE;
+    background-color: ${(props: Color) => props.color};
   }
 `
 
 const PageImg = styled.img`
-  src: url(${(props: StyleProps) => props.src});
+  src: url(${(props: Src) => props.src});
   width: 24px;
   height: 24px;
 `
@@ -90,7 +80,7 @@ const PageUl = styled.ul`
 const PageLink = styled(Link)`
   width: 100%;
   padding: 15px 0;
-  color: #212121;
+  color: ${(props: Color) => props.color};
   text-decoration: none;
   display: inline-block;
   position: relative;

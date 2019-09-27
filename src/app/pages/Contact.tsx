@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import mailIcon from '../../assets/icons/mail.png'
-import twiIcon from '../../assets/icons/twitter.png'
+import contact from '../data/values/contact'
+import { mainText, linkTextHover } from '../data/colors/elements'
+import { Color, Src } from '../data/types/elements'
 
-type StyleProps = {
-  src: string;
+type TwitterLinkColors = Color & {
+  textHover: string;
 }
 
 const Contact: React.FC = () => {
@@ -12,18 +13,23 @@ const Contact: React.FC = () => {
     <Wrapper>
       <ContactCard>
         <h3>
-          Please feel free to contact me ;)
+          {contact.message}
         </h3>
-        <Way>
-          <Icon src={mailIcon}/>
-          <Link>saccho956[at]yahoo.co.jp</Link>
-        </Way>
-        <Way as="a">
-          <Icon src={twiIcon}/>
-          <a href='https://twitter.com/runn_622v' target='_blank' rel='noopener noreferrer'>
+        <Mail>
+          <Icon src={contact.links.mail.icon}/>
+          <Link>{contact.links.mail.link}</Link>
+        </Mail>
+        <Twi
+          href='https://twitter.com/runn_622v' 
+          target='_blank'
+          rel='noopener noreferrer'
+          color={mainText}
+          textHover={linkTextHover}>
+          <Icon src={contact.links.twitter.icon}/>
+          <Link color={mainText}>
             @runn_622v
-          </a>
-        </Way>
+          </Link>
+        </Twi>
       </ContactCard>
     </Wrapper>
   )
@@ -41,13 +47,24 @@ const ContactCard = styled.div`
   align-items: center;
 `
 
-const Way = styled.div`
+const Mail = styled.div`
   display: flex;
   margin: 10px;
 `
 
+const Twi = styled.a`
+  color: ${(props: TwitterLinkColors) => props.color};
+  display: flex;
+  margin: 10px;
+  transition: .2s;
+  &:hover{
+    color: ${(props: TwitterLinkColors) => props.textHover};
+    opacity: .7;
+  }
+`
+
 const Icon = styled.img`
-  src: url(${(props: StyleProps) => props.src});
+  src: url(${(props: Src) => props.src});
   width: 24px;
   height: 24px;
   margin-right: 5px;

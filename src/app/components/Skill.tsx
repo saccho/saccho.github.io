@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Color } from '../data/types/elements'
 
 type Props = {
   name: string;
@@ -7,17 +8,8 @@ type Props = {
   color: string;
 }
 
-type CircleProps = {
-  rgba: string;
-}
-
-type NameProps = {
-  rgb: string;
-}
-
-type WaveProps = {
+type WaveProps = Color & {
   top: number;
-  color: string;
 }
 
 const Skill: React.FC<Props> = (props) => {
@@ -31,8 +23,8 @@ const Skill: React.FC<Props> = (props) => {
   const rgba = `rgb(${red}, ${green}, ${blue}, 0.4)`
 
   return(
-    <Circle rgba={rgba}>
-      <Name rgb={rgb}>{props.name}</Name>
+    <Circle color={rgba}>
+      <Name color={rgb}>{props.name}</Name>
       <Wave color={props.color} top={top}/>
     </Circle>
   );
@@ -44,17 +36,17 @@ const Circle = styled.div`
   vertical-align: top;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: white;
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px ${(props: CircleProps) => props.rgba};
+  box-shadow: 0 0 0 3px ${(props: Color) => props.color};
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 `
 
 const Name = styled.p`
-  color: ${(props: NameProps) => props.rgb};
+  color: ${(props: Color) => props.color};
   margin: 0;
   text-align: center;
   z-index: 1;

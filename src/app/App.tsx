@@ -8,13 +8,15 @@ import Home from './pages/Home';
 import Works from './pages/Works';
 import Contact from './pages/Contact';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { background, mainText } from './data/colors/elements'
+import { Color } from './data/types/elements'
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Parent>
+      <Parent color={mainText}>
         <MiniSidebar />
-        <Body>
+        <Body color={background}>
           <Header />
           <ScrollToTop>
             <Route exact path="/" component={Home} />
@@ -30,13 +32,14 @@ const App: React.FC = () => {
 
 /* Styles */
 const Parent = styled.div`
+  color: ${(props: Color) => props.color};
   min-height: 100vh;
   width: 100vw;
   display: flex;
 `
 
 const Body = styled.div`
-  background-color: #FAFAFA;
+  background-color: ${(props: Color) => props.color};
   flex: 1;
 `
 

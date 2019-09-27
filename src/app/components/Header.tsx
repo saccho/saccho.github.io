@@ -2,15 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo2.png';
-
-type StyleProps = {
-  src: string;
-}
+import { barBackground, mainText } from '../data/colors/elements'
+import { Color, Src } from '../data/types/elements'
 
 const Header: React.FC = () => {
   return(
-    <Wrapper>
-      <Title to="/">
+    <Wrapper color={barBackground}>
+      <Title to="/" color={mainText}>
         <TitleImg src={logo} />
         <Name>Satoru Yasukawa's<br/>Portfolio</Name>
       </Title>
@@ -24,7 +22,7 @@ const Wrapper = styled.div`
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #F5F5F5;
+  background-color: ${(props: Color) => props.color};
   width: 100vw;
   height: 50px;
   text-align: center;
@@ -35,7 +33,7 @@ const Wrapper = styled.div`
 
 const Title = styled(Link)`
   height: 100%;
-  color: #212121;
+  color: ${(props: Color) => props.color};
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -44,13 +42,12 @@ const Title = styled(Link)`
 
 const TitleImg = styled.img`
   margin: 0 10px;
-  src: url(${(props: StyleProps) => props.src});
+  src: url(${(props: Src) => props.src});
   width: 48px;
   height: 48px;
 `
 
 const Name = styled.h1`
-  color: #424242;
   font-size: 20px;
   margin: 0;
 `
