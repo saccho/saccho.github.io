@@ -49,13 +49,13 @@ const ContactCard = styled.div`
 
 const Mail = styled.div`
   display: flex;
-  margin: 10px;
+  margin: 5px;
 `
 
 const Twi = styled.a`
   color: ${(props: TwitterLinkColors) => props.color};
-  display: flex;
-  margin: 10px;
+  display: inline-flex;
+  margin: 5px;
   transition: .2s;
   &:hover{
     color: ${(props: TwitterLinkColors) => props.textHover};
