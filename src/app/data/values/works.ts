@@ -12,7 +12,7 @@ const works = [
     title: '長岡花火 公式アプリ',
     imgPath: nagaoka,
     url: 'https://play.google.com/store/apps/details?id=io.joren.nagaokamatsuri',
-    description: 'Product: Fuller, Inc. (joind as an Android engineer part-time job)',
+    description: 'Product: Fuller, Inc. (joined as part-time job of Android engineer)',
     languages: [languages.kotlin],
   },
   {
