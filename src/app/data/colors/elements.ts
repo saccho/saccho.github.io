@@ -22,8 +22,8 @@ var linkTextHover: string
 if (isDark()) {
   background = '#353535'
   barBackground = '#282828'
-  barBackgroundHover = '#373737'
-  waveBackground = '#424242'
+  barBackgroundHover = '#303030'
+  waveBackground = '#292929'
   skillBackground = '#A4A4A4'
 
   mainText = '#E0E0E0'
