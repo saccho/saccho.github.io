@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { skillBackground } from '../data/colors/elements'
 import { Color } from '../data/types/elements'
 
 type Props = {
@@ -10,6 +11,10 @@ type Props = {
 
 type WaveProps = Color & {
   top: number
+}
+
+type CircleProps = Color & {
+  background: string;
 }
 
 const Skill: React.FC<Props> = (props) => {
@@ -23,7 +28,7 @@ const Skill: React.FC<Props> = (props) => {
   const rgba = `rgb(${red}, ${green}, ${blue}, 0.4)`
 
   return(
-    <Circle color={rgba}>
+    <Circle background={skillBackground} color={rgba}>
       <Name color={rgb}>{props.name}</Name>
       <Wave color={props.color} top={top}/>
     </Circle>
@@ -36,11 +41,11 @@ const Circle = styled.div`
   vertical-align: top;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: ${(props: CircleProps) => props.background};
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px ${(props: Color) => props.color};
+  box-shadow: 0 0 0 3px ${(props: CircleProps) => props.color};
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 `
