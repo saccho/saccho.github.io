@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   width: 80px;
   height: 100vh;
   text-align: center;
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
 `
