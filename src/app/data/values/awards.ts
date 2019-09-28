@@ -3,6 +3,10 @@ const awards = {
     description: 'Study',
     awards: [
       {
+        name: '2019 IEEE Shin-etsu Session',
+        award: 'Young Researcher Paper Award'
+      },
+      {
         name: '2018 IEICE Shinetsu Branch Conference',
         award: 'Student Encouragement Award'
       }
