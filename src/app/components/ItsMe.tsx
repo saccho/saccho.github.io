@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     height: calc(100vh - 100vw*(393/1000) - 100px);
   }
   @media only screen and (max-width: 480px) {
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     align-items: start;
     height: 400px;
   }
-  @media only screen and (max-height: 400px) {
+  @media only screen and (max-height: 420px) {
     justify-content: start;
     align-items: start;
     height: 190px;
@@ -57,7 +57,7 @@ const AboutMe = styled.div`
   justify-content: center;
   padding: 20px 0;
   margin: 0 auto;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     text-align: center;
     top: 50px;
   }

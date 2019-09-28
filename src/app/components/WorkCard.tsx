@@ -75,16 +75,20 @@ const Card = styled.div`
   &:hover Img{
     transform: scale(1.05);
   }
+  @media only screen and (max-width: 320px) {
+    width: 280px;
+  }
 `
 
 const Title = styled.h3`
+  height: 27px;
   position: relative;
-  padding: 5px 5px 3px 5px;
+  padding: 5px 5px 0 5px;
   margin: 0;
 `
 
 const LangUl = styled.ul`
-  padding: 0 0 7px 5px;
+  padding: 0 5px 7px 5px;
   margin: 0;
   transition: .2s;
 `
@@ -118,7 +122,7 @@ const Img = styled.img`
   background-repeat: no-repeat;
   object-position: 50% 0;
   object-fit: cover;
-  width: 300px;
+  width: 100%;
   height: calc(300px * 9/16);
   transition: .2s;
 `

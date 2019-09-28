@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 50px;
   text-align: center;
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1024px) {
     display: none;
   }
 `

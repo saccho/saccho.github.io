@@ -22,7 +22,7 @@ const HeaderImg = styled.div`
   background-repeat: no-repeat;
   background-size: calc(100vw - 80px);
   filter: grayscale(100%);
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     background-position: 0 50px;
     height: calc(100vw * (393/1000));
     background-size: 100vw;
