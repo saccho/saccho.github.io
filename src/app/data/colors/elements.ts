@@ -1,6 +1,7 @@
 export const background = '#FAFAFA'
 export const barBackground = '#F5F5F5'
 export const barBackgroundHover = '#EEEEEE'
+export const waveBackground = '#ECEFF1'
 
 export const mainText = '#424242'
 export const subText = '#757575'

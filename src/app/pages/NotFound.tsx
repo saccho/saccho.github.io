@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { waveBackground, notFoundText } from '../data/colors/elements'
+import { Color } from '../data/types/elements'
 
 const NotFound: React.FC = () => {
   return(
     <Box>
-      <Wave />
-      <ErrorCode>
+      <Wave color={waveBackground} />
+      <ErrorCode color={notFoundText}>
         404
       </ErrorCode>
-      <Message>
+      <Message color={notFoundText}>
         Not Found
       </Message>
     </Box>
@@ -32,7 +34,7 @@ const Wave = styled.div`
   position: absolute;
   bottom: 30%;
   right: -50%;
-  background: #ECEFF1;
+  background: ${(props: Color) => props.color};
   width: 200vw;
   height: 200vw;
   border-radius: 43%;
@@ -49,7 +51,7 @@ const ErrorCode = styled.h3`
   opacity: .7;
   margin: 0;
   z-index: 1;
-  color: #BDBDBD;
+  color: ${(props: Color) => props.color};
 `
 
 const Message = styled(ErrorCode)`
