@@ -7,7 +7,8 @@ import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Works from './pages/Works'
 import Contact from './pages/Contact'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import NotFound from './pages/NotFound'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { background, mainText } from './data/colors/elements'
 import { Color } from './data/types/elements'
 
@@ -18,11 +19,14 @@ const App: React.FC = () => {
         <MiniSidebar />
         <Body color={background}>
           <Header />
-          <ScrollToTop>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/works" component={Works} />
-            <Route exact path="/contact" component={Contact} />
-          </ScrollToTop>
+            <ScrollToTop>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/works" component={Works} />
+                <Route exact path="/contact" component={Contact} />
+                <Route component={NotFound} />
+              </Switch>
+            </ScrollToTop>
           <Footer />
         </Body>
       </Parent>

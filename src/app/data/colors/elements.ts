@@ -4,6 +4,7 @@ export const barBackgroundHover = '#EEEEEE'
 
 export const mainText = '#424242'
 export const subText = '#757575'
+export const notFoundText = '#BDBDBD'
 
 export const card = '#E0E0E0'
 
