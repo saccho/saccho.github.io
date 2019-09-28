@@ -7,8 +7,8 @@ const Conferences: React.FC = () => {
   const dConfList = []
   const dTechList = []
 
-  for(const confIdx in conferences.international){
-    const iConf = conferences.international[confIdx]
+  for(const confIdx in conferences.international.papers){
+    const iConf = conferences.international.papers[confIdx]
     iConfList.push(
       <ConfUl>
         <ConfLi>
@@ -17,18 +17,18 @@ const Conferences: React.FC = () => {
       </ConfUl>
     )
   }
-  for(const confIdx in conferences.domestic){
-    const dConf = conferences.domestic[confIdx]
+  for(const confIdx in conferences.domestic.papers){
+    const dConf = conferences.domestic.papers[confIdx]
     dConfList.push(
       <ConfUl>
         <ConfLi>
-          {dConf.authors}, "{dConf.title}," {dConf.publication}, {dConf.date}.
+          {dConf.authors}, "{dConf.title}," {dConf.publication}, {dConf.date} ({dConf.language}).
         </ConfLi>
       </ConfUl>
     )
   }
-  for(const techIdx in conferences.tech){
-    const tech = conferences.tech[techIdx]
+  for(const techIdx in conferences.tech.papers){
+    const tech = conferences.tech.papers[techIdx]
     dTechList.push(
       <ConfUl>
         <ConfLi>
@@ -41,15 +41,15 @@ const Conferences: React.FC = () => {
   return(
     <Wrapper>
       <Conf>
-        International Conference
+        {conferences.international.description}
         {iConfList}
       </Conf>
       <Conf>
-        Domestic Conference (Japanese)
+        {conferences.domestic.description}
         {dConfList}
       </Conf>
       <Conf>
-        IEICE Technical Reports (Japanese)
+        {conferences.tech.description}
         {dTechList}
       </Conf>
     </Wrapper>
