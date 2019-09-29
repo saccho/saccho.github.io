@@ -6,20 +6,20 @@ const Awards: React.FC = () => {
   const studyList = []
   const signateList = []
 
-  for(const awardIdx in awardsList.study.awards) {
+  for(const i in awardsList.study.awards) {
     studyList.push(
-      <AwUl>
+      <AwUl key={i}>
         <AwLi>
-          {awardsList.study.awards[awardIdx].name}: {awardsList.study.awards[awardIdx].award}
+          {awardsList.study.awards[i].name}: {awardsList.study.awards[i].award}
         </AwLi>
       </AwUl>
     )
   }
-  for(const awardIdx in awardsList.signate.awards) {
+  for(const i in awardsList.signate.awards) {
     signateList.push(
-      <AwUl>
+      <AwUl key={i}>
         <AwLi>
-          {awardsList.signate.awards[awardIdx].name}: {awardsList.signate.awards[awardIdx].award}
+          {awardsList.signate.awards[i].name}: {awardsList.signate.awards[i].award}
         </AwLi>
       </AwUl>
     )

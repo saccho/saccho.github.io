@@ -8,12 +8,14 @@ import { Color, Src } from '../data/types/elements'
 const MiniSidebar: React.FC = () => {
   const list = []
   for(const i in siteInfo.pages){
-    list.push(<PageLi color={barBackgroundHover}>
-      <PageLink to={siteInfo.pages[i].path} color={mainText}>
-        <PageImg src={siteInfo.pages[i].iconUrl} />
-        <PageName>{siteInfo.pages[i].name}</PageName>
-      </PageLink>
-    </PageLi>)
+    list.push(
+      <PageLi key={i} color={barBackgroundHover}>
+        <PageLink to={siteInfo.pages[i].path} color={mainText}>
+          <PageImg src={siteInfo.pages[i].iconUrl} />
+          <PageName>{siteInfo.pages[i].name}</PageName>
+        </PageLink>
+      </PageLi>
+    )
   }
 
   return(

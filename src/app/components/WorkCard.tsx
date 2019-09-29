@@ -30,7 +30,7 @@ const WorkCard: React.FC<Props> = (props) => {
     const blue = parseInt(props.languages[i].color.substring(5, 7), 16)
     const rgba = `rgb(${red}, ${green}, ${blue}, .8)`
     langList.push(
-      <LangLi>
+      <LangLi key={i}>
         <LangStyle color={rgba}/>
         <LangName color={mainText}>{props.languages[i].name}</LangName>
       </LangLi>

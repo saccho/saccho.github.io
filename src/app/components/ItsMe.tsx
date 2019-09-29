@@ -8,7 +8,7 @@ const ItsMe: React.FC = () => {
 
   for(const i in my.sns) {
     snsList.push(
-      <SNSLink href={my.sns[i].href} iconURL={my.sns[i].icon} />
+      <SNSLink key={i} href={my.sns[i].href} iconURL={my.sns[i].icon} />
     )
   }
 

@@ -7,11 +7,12 @@ const Works: React.FC = () =>{
   const workList = []
   for(const i in works) {
     workList.push(
-    <WorkCard title={works[i].title} imgSrc={works[i].imgPath} 
-      url={works[i].url} 
-      description={works[i].description}
-      languages={works[i].languages}
-    />)
+      <WorkCard key={i} title={works[i].title} imgSrc={works[i].imgPath} 
+        url={works[i].url} 
+        description={works[i].description}
+        languages={works[i].languages}
+      />
+    )
   }
   return(
     <div>

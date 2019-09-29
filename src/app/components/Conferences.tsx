@@ -7,30 +7,30 @@ const Conferences: React.FC = () => {
   const dConfList = []
   const dTechList = []
 
-  for(const confIdx in conferences.international.papers){
-    const iConf = conferences.international.papers[confIdx]
+  for(const i in conferences.international.papers){
+    const iConf = conferences.international.papers[i]
     iConfList.push(
-      <ConfUl>
+      <ConfUl key={i}>
         <ConfLi>
           {iConf.authors}, "{iConf.title}," {iConf.publication}, {iConf.date}.
         </ConfLi>
       </ConfUl>
     )
   }
-  for(const confIdx in conferences.domestic.papers){
-    const dConf = conferences.domestic.papers[confIdx]
+  for(const i in conferences.domestic.papers){
+    const dConf = conferences.domestic.papers[i]
     dConfList.push(
-      <ConfUl>
+      <ConfUl key={i}>
         <ConfLi>
           {dConf.authors}, "{dConf.title}," {dConf.publication}, {dConf.date} ({dConf.language}).
         </ConfLi>
       </ConfUl>
     )
   }
-  for(const techIdx in conferences.tech.papers){
-    const tech = conferences.tech.papers[techIdx]
+  for(const i in conferences.tech.papers){
+    const tech = conferences.tech.papers[i]
     dTechList.push(
-      <ConfUl>
+      <ConfUl key={i}>
         <ConfLi>
           {tech.authors}, "{tech.title}," {tech.publication}, {tech.date}.
         </ConfLi>

@@ -8,6 +8,7 @@ const Education: React.FC = () => {
   for(const i in education) {
     educationList.push(
       <Experience
+        key={i}
         date={education[i].date}
         name={education[i].name}
         status={education[i].status}

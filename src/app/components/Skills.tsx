@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
   for(const i in skills.languages){
     const lang = skills.languages[i]
     langList.push(
-      <SkillList>
+      <SkillList key={i}>
         <Skill name={lang.name} level={lang.level} color={lang.color}>
           {lang.name}
         </Skill>
@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
   for(const i in skills.others){
     const other = skills.others[i]
     otherList.push(
-      <SkillList>
+      <SkillList key={i}>
         <Skill name={other.name} level={other.level} color={other.color}>
           {other.name}
         </Skill>

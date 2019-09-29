@@ -8,6 +8,7 @@ const Experiences: React.FC = () => {
   for(const i in experiences) {
     expList.push(
       <Experience
+        key={i}
         date={experiences[i].date}
         name={experiences[i].name}
         status={experiences[i].status}
