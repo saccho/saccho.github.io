@@ -75,8 +75,9 @@ const Card = styled.div`
   &:hover Img{
     transform: scale(1.05);
   }
-  @media only screen and (max-width: 320px) {
-    width: 280px;
+  @media only screen and (max-width: 340px) {
+    width: auto;
+    height: auto;
   }
 `
 
@@ -85,6 +86,9 @@ const Title = styled.h3`
   position: relative;
   padding: 5px 5px 0 5px;
   margin: 0;
+  @media only screen and (max-width: 340px) {
+    height: auto;
+  }
 `
 
 const LangUl = styled.ul`
