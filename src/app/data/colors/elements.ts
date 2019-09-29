@@ -1,12 +1,3 @@
-function isDark() {
-  const nowHours = new Date().getHours()
-  if (nowHours < 7 || nowHours >= 19) {
-    return true
-  } else {
-    return false
-  }
-}
-
 var background: string
 var barBackground: string
 var barBackgroundHover: string
@@ -49,6 +40,15 @@ if (isDark()) {
 
   worksCardHover = '#4FC3F7'
   linkTextHover = '#03A9F4'
+}
+
+export function isDark() {
+  const nowHours = new Date().getHours()
+  if (nowHours < 7 || nowHours >= 19) {
+    return true
+  } else {
+    return false
+  }
 }
 
 export { background, barBackground, barBackgroundHover, waveBackground, skillBackground,

@@ -1,11 +1,21 @@
 import nagaoka from '../../../assets/works/nagaokamatsuri.jpg'
-import newPortfolio from '../../../assets/works/newPortfolio.jpg'
+import newPortfolioLight from '../../../assets/works/newPortfolioLight.jpg'
+import newPortfolioDark from '../../../assets/works/newPortfolioDark.jpg'
 import artistNetwork from '../../../assets/works/artistNetwork.jpg'
 import oldPortfolio from '../../../assets/works/oldPortfolio.jpg'
 import kawaya from '../../../assets/works/kawaya.jpg'
 import autoCloudRT from '../../../assets/works/autoCloudRT.jpg'
 import linebot from '../../../assets/works/linebot.jpg'
 import languages from '../colors/laguages'
+import { isDark } from '../colors/elements'
+
+function getPortfolioColor() {
+  if (isDark()) {
+    return newPortfolioDark
+  } else {
+    return newPortfolioLight
+  }
+}
 
 const works = [
   {
@@ -17,7 +27,7 @@ const works = [
   },
   {
     title: 'Portfolio Site (This site)',
-    imgPath: newPortfolio,
+    imgPath: getPortfolioColor(),
     url: 'https://github.com/saccho/saccho.github.io',
     description: 'Personal work',
     languages: [languages.react, languages.ts]
