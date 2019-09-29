@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/icons/logo2.png'
+import siteInfo from '../data/values/siteInfo'
 import { barBackground, mainText } from '../data/colors/elements'
 import { Color, Src } from '../data/types/elements'
 
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return(
     <Wrapper color={barBackground}>
       <Title to="/" color={mainText}>
-        <TitleImg src={logo} />
+        <TitleImg src={siteInfo.logo} />
         <Name>Satoru Yasukawa's<br/>Portfolio</Name>
       </Title>
     </Wrapper>

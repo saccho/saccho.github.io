@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import pages from '../data/values/pages'
+import siteInfo from '../data/values/siteInfo'
 import { barBackground, barBackgroundHover, mainText } from '../data/colors/elements'
 import { Color, Src } from '../data/types/elements'
 
 const Footer: React.FC = () => {
   const list = []
-  for(const i in pages){
+  for(const i in siteInfo.pages){
     list.push(<PageLi color={barBackgroundHover}>
-      <PageLink to={pages[i].path} color={mainText}>
-        <PageImg src={pages[i].iconUrl} />
-        <PageName>{pages[i].name}</PageName>
+      <PageLink to={siteInfo.pages[i].path} color={mainText}>
+        <PageImg src={siteInfo.pages[i].iconUrl} />
+        <PageName>{siteInfo.pages[i].name}</PageName>
       </PageLink>
     </PageLi>)
   }
