@@ -8,20 +8,16 @@ const Awards: React.FC = () => {
 
   for(const i in awardsList.study.awards) {
     studyList.push(
-      <AwUl key={i}>
-        <AwLi>
-          {awardsList.study.awards[i].name}: {awardsList.study.awards[i].award}
-        </AwLi>
-      </AwUl>
+      <AwLi key={i}>
+        {awardsList.study.awards[i].name}: {awardsList.study.awards[i].award}
+      </AwLi>
     )
   }
   for(const i in awardsList.signate.awards) {
     signateList.push(
-      <AwUl key={i}>
-        <AwLi>
-          {awardsList.signate.awards[i].name}: {awardsList.signate.awards[i].award}
-        </AwLi>
-      </AwUl>
+      <AwLi key={i}>
+        {awardsList.signate.awards[i].name}: {awardsList.signate.awards[i].award}
+      </AwLi>
     )
   }
 
@@ -29,11 +25,15 @@ const Awards: React.FC = () => {
     <Wrapper>
       <Aw>
         {awardsList.study.description}
-        {studyList}
+        <AwUl>
+          {studyList}
+        </AwUl>
       </Aw>
       <Aw>
         {awardsList.signate.description}
-        {signateList}
+        <AwUl>
+          {signateList}
+        </AwUl>
       </Aw>
     </Wrapper>
   )
@@ -54,6 +54,7 @@ const AwUl = styled.ul`
 
 const AwLi = styled.li`
   width: 100%;
+  margin: 16px 0;
 `
 
 export default Awards;

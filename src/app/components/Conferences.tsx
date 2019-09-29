@@ -10,31 +10,25 @@ const Conferences: React.FC = () => {
   for(const i in conferences.international.papers){
     const iConf = conferences.international.papers[i]
     iConfList.push(
-      <ConfUl key={i}>
-        <ConfLi>
-          {iConf.authors}, "{iConf.title}," {iConf.publication}, {iConf.date}.
-        </ConfLi>
-      </ConfUl>
+      <ConfLi key={i}>
+        {iConf.authors}, "{iConf.title}," {iConf.publication}, {iConf.date}.
+      </ConfLi>
     )
   }
   for(const i in conferences.domestic.papers){
     const dConf = conferences.domestic.papers[i]
     dConfList.push(
-      <ConfUl key={i}>
-        <ConfLi>
-          {dConf.authors}, "{dConf.title}," {dConf.publication}, {dConf.date} ({dConf.language}).
-        </ConfLi>
-      </ConfUl>
+      <ConfLi key={i}>
+        {dConf.authors}, "{dConf.title}," {dConf.publication}, {dConf.date} ({dConf.language}).
+      </ConfLi>
     )
   }
   for(const i in conferences.tech.papers){
     const tech = conferences.tech.papers[i]
     dTechList.push(
-      <ConfUl key={i}>
-        <ConfLi>
-          {tech.authors}, "{tech.title}," {tech.publication}, {tech.date}.
-        </ConfLi>
-      </ConfUl>
+      <ConfLi key={i}>
+        {tech.authors}, "{tech.title}," {tech.publication}, {tech.date}.
+      </ConfLi>
     )
   }
 
@@ -42,15 +36,21 @@ const Conferences: React.FC = () => {
     <Wrapper>
       <Conf>
         {conferences.international.description}
-        {iConfList}
+        <ConfUl>
+          {iConfList}
+        </ConfUl>
       </Conf>
       <Conf>
         {conferences.domestic.description}
-        {dConfList}
+        <ConfUl>
+          {dConfList}
+        </ConfUl>
       </Conf>
       <Conf>
         {conferences.tech.description}
-        {dTechList}
+        <ConfUl>
+          {dTechList}
+        </ConfUl>
       </Conf>
     </Wrapper>
   )
@@ -71,6 +71,7 @@ const ConfUl = styled.ul`
 
 const ConfLi = styled.li`
   width: 100%;
+  margin: 16px 0;
 `
 
 export default Conferences;
