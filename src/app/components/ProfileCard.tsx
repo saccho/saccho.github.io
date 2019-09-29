@@ -27,6 +27,10 @@ const Card = styled.div`
   border-top: 1px solid ${(props: Color) => props.color};
   margin: 0 10px 0 0;
   padding: 10px 0 10px 10px;
+  @media only screen and (max-width: 1023px) {
+    margin: 0;
+    padding: 10px;
+  }
 `
 
 export default ProfileCard;
