@@ -42,8 +42,7 @@ const Wrapper = styled.div`
 
 const PageLi = styled.li`
   width : calc(100% / 3);
-  height: calc(100% - 5px);
-  padding-top: 5px;
+  height: 100%;
   display: inline-block;
   transition: background-color .1s;
   &:hover{
@@ -55,6 +54,7 @@ const PageImg = styled.img`
   src: url(${(props: Src) => props.src});
   width: 24px;
   height: 24px;
+  padding-top: 5px;
 `
 
 const PageName = styled.p`
@@ -63,7 +63,7 @@ const PageName = styled.p`
 `
 
 const PageUl = styled.ul`
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: inline-block;
   padding: 0;
@@ -72,10 +72,10 @@ const PageUl = styled.ul`
 `
 
 const PageLink = styled(Link)`
+  height: 100%;
   color: ${(props: Color) => props.color};
   text-decoration: none;
   display: block;
-  position: relative;
 `
 
 export default Footer;
