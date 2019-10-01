@@ -2,6 +2,7 @@
   "name": "saccho.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://saccho.github.io",
   "dependencies": {
     "@babel/core": "7.5.5",
     "@svgr/webpack": "4.3.2",
@@ -70,7 +71,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -141,6 +144,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^4.1.18"
+    "@types/styled-components": "^4.1.18",
+    "gh-pages": "^2.1.1"
   }
 }
