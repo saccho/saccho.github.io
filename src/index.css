@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Rubik&display=swap');
 body {
   margin: 0;
-  font-family: 'M PLUS Rounded 1c', 'Segoe UI', 
+  font-family: 'Rubik', 'M PLUS Rounded 1c', 'Segoe UI', 
     'ヒラギノ角ゴ Pro W3', 'YuGothic', '游ゴシック', 'Meiryo', 'メイリオ', 
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
