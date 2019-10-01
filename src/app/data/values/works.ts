@@ -42,7 +42,7 @@ const works = [
   {
     title: 'Portfolio Site (Old)',
     imgPath: oldPortfolio,
-    url: 'https://github.com/saccho/saccho.github.io',
+    url: 'https://github.com/saccho/saccho.github.io-old',
     description: 'Personal work',
     languages: [languages.vue, languages.js]
   },
