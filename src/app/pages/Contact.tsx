@@ -37,10 +37,13 @@ const Contact: React.FC = () => {
 
 /* Styles */
 const Wrapper = styled.div`
-  height: calc(100vh - 100px);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 1025px) {
+    height: calc(100vh - 100px);
+  }
 `
 
 const ContactCard = styled.div`

@@ -19,14 +19,14 @@ const App: React.FC = () => {
         <MiniSidebar />
         <Body color={background}>
           <Header />
-            <ScrollToTop>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/works" component={Works} />
-                <Route exact path="/contact" component={Contact} />
-                <Route component={NotFound} />
-              </Switch>
-            </ScrollToTop>
+          <ScrollToTop>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/works" component={Works} />
+              <Route exact path="/contact" component={Contact} />
+              <Route component={NotFound} />
+            </Switch>
+          </ScrollToTop>
           <Footer />
         </Body>
       </Parent>
@@ -37,7 +37,6 @@ const App: React.FC = () => {
 /* Styles */
 const Parent = styled.div`
   color: ${(props: Color) => props.color};
-  min-height: 100vh;
   width: 100vw;
   display: flex;
 `
@@ -45,6 +44,7 @@ const Parent = styled.div`
 const Body = styled.div`
   background-color: ${(props: Color) => props.color};
   flex: 1;
+  min-height: 100vh;
 `
 
 export default App;
