@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     align-items: start;
     height: 400px;
   }
-  @media only screen and (max-height: 420px) {
+  @media only screen and (min-width: 481px) and (max-height: 720px) {
     justify-content: start;
     align-items: start;
     height: 190px;
