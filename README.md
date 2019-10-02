@@ -1,6 +1,12 @@
 # Satoru Yasukawa's Portfolio Site
 Please visit: https://saccho.github.io/
 
+* Light Mode (07:00 - 19:00)
+<img src=https://github.com/saccho/saccho.github.io/blob/develop/src/assets/works/newPortfolioLight.jpg/>
+
+* Dark Mode (19:00 - 07:00)
+<img src=https://github.com/saccho/saccho.github.io/blob/develop/src/assets/works/newPortfolioDark.jpg/>
+
 ## Languages / Frameworks / Libraries
 * TypeScript
 * React
