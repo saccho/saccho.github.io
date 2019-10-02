@@ -37,12 +37,12 @@ const Contact: React.FC = () => {
 
 /* Styles */
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: 1025px) {
-    height: calc(100vh - 100px);
+    height: calc(100% - 100px);
   }
 `
 
