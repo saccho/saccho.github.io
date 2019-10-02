@@ -53,6 +53,4 @@ const Description = styled.div`
   }
 `
 
-
-
 export default Profile;
