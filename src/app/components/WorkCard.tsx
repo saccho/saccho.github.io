@@ -36,6 +36,7 @@ const WorkCard: React.FC<Props> = (props) => {
       </LangLi>
     )
   }
+  
   return(
     <WorkLink href={props.url} target='_blank' rel='noopener noreferrer' color={mainText}>
       <Card border={card} borderHover={worksCardHover} textHover={linkTextHover}>
@@ -55,9 +56,6 @@ const WorkCard: React.FC<Props> = (props) => {
 /* Styles */
 const WorkLink = styled.a`
   text-align: left;
-  display: inline-block;
-  margin: 20px;
-  vertical-align: top;
   text-decoration: none;
   color: ${(props: Color) => props.color};
 `
