@@ -91,6 +91,7 @@ const Status = styled.p`
 `
 
 const Links = styled.div`
+  text-align: center;
   margin: 20px 0 0 0;
 `
 
