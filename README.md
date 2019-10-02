@@ -20,6 +20,7 @@ Please visit: https://saccho.github.io/
 ```
 git clone https://github.com/saccho/saccho.github.io.git
 cd saccho.github.io
+yarn install
 yarn start
 ```
 
