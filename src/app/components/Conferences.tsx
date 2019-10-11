@@ -17,7 +17,7 @@ const Conferences: React.FC = () => {
   for(const i in conferences.domestic.papers){
     const dConf = conferences.domestic.papers[i]
     dConfList.push(
-      `${dConf.authors}, "${dConf.title}," ${dConf.publication}, ${dConf.date}.`
+      `${dConf.authors}, "${dConf.title}," ${dConf.publication}, ${dConf.date} (${dConf.language}).`
     )
   }
   for(const i in conferences.tech.papers){
