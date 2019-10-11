@@ -47,9 +47,11 @@ const DescriptionWrapper = styled.div`
 `
 
 const Description = styled.div`
-  width: 50%;
+  width: calc(50% - 10px);
+  margin: 0 10px 0 0;
   @media only screen and (max-width: 1023px) {
     width: 100%;
+    margin: 0;
   }
 `
 
