@@ -16,6 +16,10 @@ const languages = {
     name: 'Go',
     color: '#00ADD8'
   },
+  rust: {
+    name: 'Rust',
+    color: '#DEA584'
+  },
   js: {
     name: 'JavaScript',
     color: '#F1E05A'
