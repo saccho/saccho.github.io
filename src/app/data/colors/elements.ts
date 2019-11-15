@@ -15,7 +15,7 @@ if (isDark()) {
   barBackground = '#282828'
   barBackgroundHover = '#303030'
   waveBackground = '#292929'
-  skillBackground = '#A4A4A4'
+  skillBackground = '#616161'
 
   mainText = '#E0E0E0'
   subText = '#BDBDBD'

@@ -9,21 +9,27 @@ const Skills: React.FC = () => {
     const lang = skills.languages[i]
     langList.push(
       <SkillList key={i}>
-        <Skill name={lang.name} level={lang.level} color={lang.color}>
-          {lang.name}
-        </Skill>
+        <Skill level={lang.level} color={lang.color} icon={lang.icon} />
       </SkillList>
     )
   }
 
-  const otherList = []
-  for(const i in skills.others){
-    const other = skills.others[i]
-    otherList.push(
+  const libList = []
+  for(const i in skills.libraries){
+    const lib = skills.libraries[i]
+    libList.push(
       <SkillList key={i}>
-        <Skill name={other.name} level={other.level} color={other.color}>
-          {other.name}
-        </Skill>
+        <Skill level={lib.level} color={lib.color} icon={lib.icon} />
+      </SkillList>
+    )
+  }
+
+  const toolList = []
+  for(const i in skills.tools){
+    const tool = skills.tools[i]
+    toolList.push(
+      <SkillList key={i}>
+        <Skill level={tool.level} color={tool.color} icon={tool.icon} />
       </SkillList>
     )
   }
@@ -34,7 +40,10 @@ const Skills: React.FC = () => {
         {langList}
       </Wrapper>
       <Wrapper>
-        {otherList}
+        {libList}
+      </Wrapper>
+      <Wrapper>
+        {toolList}
       </Wrapper>
     </div>
   )
@@ -51,4 +60,4 @@ const SkillList = styled.li`
   list-style: none;
 `
 
-export default Skills;
+export default Skills

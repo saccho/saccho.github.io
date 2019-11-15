@@ -58,7 +58,7 @@ const works = [
     imgPath: kawaya,
     url: 'https://github.com/ExciteJapanPub/summer-intern-2018-blockchain-fabric',
     description: 'Internship: Excite Japan Co., Ltd.',
-    languages: [languages.go, languages.js, languages.python, languages.node]
+    languages: [languages.go, languages.js, languages.python]
   },
   {
     title: 'LINE BOT',
