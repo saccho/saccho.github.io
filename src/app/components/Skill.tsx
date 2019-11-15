@@ -44,14 +44,12 @@ const Circle = styled.div`
 
 const Icon = styled.div`
   position: absolute;
-  z-index: 0;
 `
 
 const Name = styled.p`
   color: ${(props: Color) => props.color};
   margin: 0;
   text-align: center;
-  z-index: 1;
 `
 
 export default Skill
