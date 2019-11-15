@@ -17,6 +17,7 @@ import { ReactComponent as FirebaseIcon } from '../../../assets/icons/skills/fir
 import { ReactComponent as MLIcon } from '../../../assets/icons/skills/ml.svg'
 import { ReactComponent as DLIcon } from '../../../assets/icons/skills/dl.svg'
 import { ReactComponent as BCIcon } from '../../../assets/icons/skills/bc.svg'
+import { ReactComponent as AndroidIcon } from '../../../assets/icons/skills/android.svg'
 
 const skills = {
   languages: [
@@ -40,6 +41,7 @@ const skills = {
     {name: 'Firebase', level: 2, color: defaultColor, icon: FirebaseIcon},
   ],
   others: [
+    {name: 'Android', level: 2, color: defaultColor, icon: AndroidIcon},
     {name: 'Machine Learning', level: 4, color: defaultColor, icon: MLIcon},
     {name: 'Deep Learning', level: 2, color: defaultColor, icon: DLIcon},
     {name: 'Blockchain', level: 1, color: defaultColor, icon: BCIcon},
