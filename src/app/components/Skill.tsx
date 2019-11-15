@@ -66,12 +66,14 @@ const Wave = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 45%;
-  animation: drift 10s infinite linear;
-  @keyframes drift {
-    from { transform: rotate(0deg); }
-    from { transform: rotate(360deg); }
-  }
   z-index: 0;
+  @media only screen and (min-width: 1025px) {
+    animation: drift 10s infinite linear;
+    @keyframes drift {
+      from { transform: rotate(0deg); }
+      from { transform: rotate(360deg); }
+    }
+  }
 `
 
 export default Skill;
