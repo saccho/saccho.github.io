@@ -26,7 +26,7 @@ const Skill: React.FC<Props> = (props) => {
 
   const rgb = `rgb(${red}, ${green}, ${blue})`
   const rgba = `rgb(${red}, ${green}, ${blue}, 0.4)`
-
+  
   return(
     <Circle background={skillBackground} color={rgba}>
       <Name color={rgb}>{props.name}</Name>
@@ -48,7 +48,6 @@ const Circle = styled.div`
   box-shadow: 0 0 0 3px ${(props: CircleProps) => props.color};
   overflow: hidden;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   transform: translate(0, 0);
 `
 
@@ -69,7 +68,6 @@ const Wave = styled.div`
   height: 200px;
   border-radius: 45%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   animation: drift 10s infinite linear;
   @keyframes drift {
     from { transform: rotate(0deg); }
