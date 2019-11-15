@@ -1,4 +1,4 @@
-import {subText as defaultColor} from '../colors/elements'
+import {mainText as defaultColor} from '../colors/elements'
 import languages from '../colors/laguages'
 import { ReactComponent as PythonIcon } from '../../../assets/icons/skills/python.svg'
 import { ReactComponent as MatlabIcon } from '../../../assets/icons/skills/matlab.svg'
@@ -14,10 +14,11 @@ import { ReactComponent as ReactIcon } from '../../../assets/icons/skills/react.
 import { ReactComponent as GitIcon } from '../../../assets/icons/skills/git.svg'
 import { ReactComponent as GCPIcon } from '../../../assets/icons/skills/gcp.svg'
 import { ReactComponent as FirebaseIcon } from '../../../assets/icons/skills/firebase.svg'
+import { ReactComponent as SignalIcon } from '../../../assets/icons/skills/signal.svg'
 import { ReactComponent as MLIcon } from '../../../assets/icons/skills/ml.svg'
 import { ReactComponent as DLIcon } from '../../../assets/icons/skills/dl.svg'
-import { ReactComponent as BCIcon } from '../../../assets/icons/skills/bc.svg'
 import { ReactComponent as AndroidIcon } from '../../../assets/icons/skills/android.svg'
+import { ReactComponent as BCIcon } from '../../../assets/icons/skills/bc.svg'
 
 const skills = {
   languages: [
@@ -41,9 +42,10 @@ const skills = {
     {name: 'Firebase', level: 2, color: defaultColor, icon: FirebaseIcon},
   ],
   others: [
-    {name: 'Android', level: 2, color: defaultColor, icon: AndroidIcon},
+    {name: 'Signal Processing', level: 2, color: defaultColor, icon: SignalIcon},
     {name: 'Machine Learning', level: 4, color: defaultColor, icon: MLIcon},
     {name: 'Deep Learning', level: 2, color: defaultColor, icon: DLIcon},
+    {name: 'Android', level: 2, color: defaultColor, icon: AndroidIcon},
     {name: 'Blockchain', level: 1, color: defaultColor, icon: BCIcon},
   ],
 }

@@ -13,6 +13,7 @@ const Skills: React.FC = () => {
       </SkillList>
     )
   }
+
   const libList = []
   for(const i in skills.libraries){
     const lib = skills.libraries[i]
@@ -22,24 +23,13 @@ const Skills: React.FC = () => {
       </SkillList>
     )
   }
+
   const toolList = []
   for(const i in skills.tools){
     const tool = skills.tools[i]
     toolList.push(
       <SkillList key={i}>
         <Skill level={tool.level} color={tool.color} icon={tool.icon} />
-      </SkillList>
-    )
-  }
-
-  const otherList = []
-  for(const i in skills.others){
-    const other = skills.others[i]
-    otherList.push(
-      <SkillList key={i}>
-        <Skill level={other.level} color={other.color} icon={other.icon}>
-          {other.name}
-        </Skill>
       </SkillList>
     )
   }
@@ -54,9 +44,6 @@ const Skills: React.FC = () => {
       </Wrapper>
       <Wrapper>
         {toolList}
-      </Wrapper>
-      <Wrapper>
-        {otherList}
       </Wrapper>
     </div>
   )

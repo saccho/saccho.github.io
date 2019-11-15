@@ -5,6 +5,7 @@ import ProfileCard from '../components/ProfileCard'
 import Experiences from '../components/Experiences'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
+import OtherSkills from '../components/OtherSkills'
 import Conferences from '../components/Conferences'
 import Awards from '../components/Awards'
 
@@ -30,6 +31,9 @@ const Profile: React.FC = () => {
         <Description>
           <ProfileCard title='SKILLS'>
             <Skills />
+          </ProfileCard>
+          <ProfileCard title='FIELD / KNOWLEDGE'>
+            <OtherSkills />
           </ProfileCard>
         </Description>
       </DescriptionWrapper>
