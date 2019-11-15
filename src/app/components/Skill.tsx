@@ -47,8 +47,7 @@ const Circle = styled.div`
   border-radius: 50%;
   box-shadow: 0 0 0 3px ${(props: CircleProps) => props.color};
   overflow: hidden;
-  backface-visibility: hidden;
-  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
 `
 
 const Name = styled.p`
@@ -67,7 +66,6 @@ const Wave = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 45%;
-  backface-visibility: hidden;
   animation: drift 10s infinite linear;
   @keyframes drift {
     from { transform: rotate(0deg); }
