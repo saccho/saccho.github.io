@@ -12,6 +12,7 @@ import { ReactComponent as CSScon } from '../../../assets/icons/skills/css.svg'
 import { ReactComponent as VueIcon } from '../../../assets/icons/skills/vue.svg'
 import { ReactComponent as ReactIcon } from '../../../assets/icons/skills/react.svg'
 import { ReactComponent as GitIcon } from '../../../assets/icons/skills/git.svg'
+import { ReactComponent as GithubIcon } from '../../../assets/icons/skills/github.svg'
 import { ReactComponent as GCPIcon } from '../../../assets/icons/skills/gcp.svg'
 import { ReactComponent as FirebaseIcon } from '../../../assets/icons/skills/firebase.svg'
 import { ReactComponent as SignalIcon } from '../../../assets/icons/skills/signal.svg'
@@ -37,7 +38,8 @@ const skills = {
     {name: languages.react.name, level: 2, color: languages.react.color, icon: ReactIcon},
   ],
   tools: [
-    {name: 'Git / Github', level: 4, color: defaultColor, icon: GitIcon},
+    {name: 'Git', level: 4, color: defaultColor, icon: GitIcon},
+    {name: 'GitHub', level: 4, color: defaultColor, icon: GithubIcon},
     {name: 'GCP', level: 2, color: defaultColor, icon: GCPIcon},
     {name: 'Firebase', level: 2, color: defaultColor, icon: FirebaseIcon},
   ],
