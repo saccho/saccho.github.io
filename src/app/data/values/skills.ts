@@ -1,28 +1,49 @@
-import {mainText as defaultColor} from '../colors/elements'
+import {subText as defaultColor} from '../colors/elements'
 import languages from '../colors/laguages'
+import { ReactComponent as PythonIcon } from '../../../assets/icons/skills/python.svg'
+import { ReactComponent as MatlabIcon } from '../../../assets/icons/skills/matlab.svg'
+import { ReactComponent as KotlinIcon } from '../../../assets/icons/skills/kotlin.svg'
+import { ReactComponent as GoIcon } from '../../../assets/icons/skills/go.svg'
+import { ReactComponent as RustIcon } from '../../../assets/icons/skills/rust.svg'
+import { ReactComponent as JSIcon } from '../../../assets/icons/skills/js.svg'
+import { ReactComponent as TSIcon } from '../../../assets/icons/skills/ts.svg'
+import { ReactComponent as HTMLIcon } from '../../../assets/icons/skills/html.svg'
+import { ReactComponent as CSScon } from '../../../assets/icons/skills/css.svg'
+import { ReactComponent as VueIcon } from '../../../assets/icons/skills/vue.svg'
+import { ReactComponent as ReactIcon } from '../../../assets/icons/skills/react.svg'
+import { ReactComponent as GitIcon } from '../../../assets/icons/skills/git.svg'
+import { ReactComponent as GCPIcon } from '../../../assets/icons/skills/gcp.svg'
+import { ReactComponent as FirebaseIcon } from '../../../assets/icons/skills/firebase.svg'
+import { ReactComponent as MLIcon } from '../../../assets/icons/skills/ml.svg'
+import { ReactComponent as DLIcon } from '../../../assets/icons/skills/dl.svg'
+import { ReactComponent as BCIcon } from '../../../assets/icons/skills/bc.svg'
 
 const skills = {
   languages: [
-    {name: languages.python.name, level: 5, color: languages.python.color},
-    {name: languages.matlab.name, level: 4, color: languages.matlab.color},
-    {name: languages.kotlin.name, level: 3, color: languages.kotlin.color},
-    {name: languages.go.name, level: 3, color: languages.go.color},
-    {name: languages.rust.name, level: 2, color: languages.rust.color},
-    {name: languages.js.name, level: 3, color: languages.js.color},
-    {name: languages.ts.name, level: 2, color: languages.ts.color},
-    {name: languages.html.name, level: 4, color: languages.html.color},
-    {name: languages.css.name, level: 4, color: languages.css.color}
+    {name: languages.python.name, level: 5, color: languages.python.color, icon: PythonIcon},
+    {name: languages.matlab.name, level: 4, color: languages.matlab.color, icon: MatlabIcon},
+    {name: languages.kotlin.name, level: 3, color: languages.kotlin.color, icon: KotlinIcon},
+    {name: languages.go.name, level: 3, color: languages.go.color, icon: GoIcon},
+    {name: languages.rust.name, level: 2, color: languages.rust.color, icon: RustIcon},
+    {name: languages.js.name, level: 3, color: languages.js.color, icon: JSIcon},
+    {name: languages.ts.name, level: 2, color: languages.ts.color, icon: TSIcon},
+    {name: languages.html.name, level: 4, color: languages.html.color, icon: HTMLIcon},
+    {name: languages.css.name, level: 4, color: languages.css.color, icon: CSScon},
+  ],
+  libraries: [
+    {name: languages.vue.name, level: 3, color: languages.vue.color, icon: VueIcon},
+    {name: languages.react.name, level: 2, color: languages.react.color, icon: ReactIcon},
+  ],
+  tools: [
+    {name: 'Git / Github', level: 4, color: defaultColor, icon: GitIcon},
+    {name: 'GCP', level: 2, color: defaultColor, icon: GCPIcon},
+    {name: 'Firebase', level: 2, color: defaultColor, icon: FirebaseIcon},
   ],
   others: [
-    {name: languages.vue.name, level: 3, color: languages.vue.color},
-    {name: languages.react.name, level: 2, color: languages.react.color},
-    {name: languages.node.name, level: 1, color: languages.node.color},
-    {name: 'Git / Github', level: 4, color: defaultColor},
-    {name: 'Firestore', level: 2, color: defaultColor},
-    {name: 'Machine Learning', level: 4, color: defaultColor},
-    {name: 'Deep Learning', level: 2, color: defaultColor},
-    {name: 'Blockchain', level: 1, color: defaultColor}
-  ]
+    {name: 'Machine Learning', level: 4, color: defaultColor, icon: MLIcon},
+    {name: 'Deep Learning', level: 2, color: defaultColor, icon: DLIcon},
+    {name: 'Blockchain', level: 1, color: defaultColor, icon: BCIcon},
+  ],
 }
 
 export default skills
