@@ -42,7 +42,7 @@ const skills = {
     {name: 'Firebase', level: 2, color: defaultColor, icon: FirebaseIcon},
   ],
   others: [
-    {name: 'Signal Processing', level: 2, color: defaultColor, icon: SignalIcon},
+    {name: 'Signal Processing', level: 5, color: defaultColor, icon: SignalIcon},
     {name: 'Machine Learning', level: 4, color: defaultColor, icon: MLIcon},
     {name: 'Deep Learning', level: 2, color: defaultColor, icon: DLIcon},
     {name: 'Android', level: 2, color: defaultColor, icon: AndroidIcon},
