@@ -1,40 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 type Props = {
-  title: string
-  children: string[]
-}
+  title: string;
+  children: string[];
+};
 
-const List: React.FC<Props> = (props) => {
-  const childList = []
+const List: React.FC<Props> = props => {
+  const childList = [];
 
-  for(const i in props.children) {
-    childList.push(
-      <Li key={i}>
-        {props.children[i]}
-      </Li>
-    )
+  for (const i in props.children) {
+    childList.push(<Li key={i}>{props.children[i]}</Li>);
   }
 
-  return(
+  return (
     <div>
       <p>{props.title}</p>
-      <Ul>
-        {childList}
-      </Ul>
+      <Ul>{childList}</Ul>
     </div>
-  )
-}
+  );
+};
 
 /* Styles */
 const Ul = styled.ul`
   padding-left: 30px;
-`
+`;
 
 const Li = styled.li`
   width: 100%;
   margin: 16px 0;
-`
+`;
 
-export default List
+export default List;
