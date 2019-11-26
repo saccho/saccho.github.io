@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { background, mainText } from './data/colors/elements'
 import { Color } from './data/types/elements'
-import withTracker from './withTracker'
+import WithTracker from './components/WithTracker'
 
 const App: React.FC = () => {
   return (
@@ -22,10 +22,10 @@ const App: React.FC = () => {
           <Header />
           <ScrollToTop>
             <Switch>
-              <Route exact path="/" component={withTracker(Home)} />
-              <Route exact path="/works" component={withTracker(Works)} />
-              <Route exact path="/contact" component={withTracker(Contact)} />
-              <Route component={withTracker(NotFound)} />
+              <Route exact path="/" component={WithTracker(Home)} />
+              <Route exact path="/works" component={WithTracker(Works)} />
+              <Route exact path="/contact" component={WithTracker(Contact)} />
+              <Route component={WithTracker(NotFound)} />
             </Switch>
           </ScrollToTop>
           <Footer />

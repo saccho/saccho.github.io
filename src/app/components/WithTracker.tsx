@@ -3,7 +3,7 @@ import * as GoogleAnalytics from "react-ga";
 
 GoogleAnalytics.initialize(process.env.REACT_APP_GA_TRACK_ID);
 
-const withTracker = (WrappedComponent: React.FC, options = {}) => {
+const WithTracker = (WrappedComponent: React.FC, options = {}) => {
     const trackPage = (page: string) => {
         GoogleAnalytics.set({
             page,
@@ -35,4 +35,4 @@ const withTracker = (WrappedComponent: React.FC, options = {}) => {
     return HOC;
 };
 
-export default withTracker;
+export default WithTracker;
