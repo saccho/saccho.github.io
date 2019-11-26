@@ -1,26 +1,22 @@
-import React from 'react'
-import Experience from './Experience'
-import education from '../data/values/education'
+import React from "react";
+import Experience from "./Experience";
+import education from "../data/values/education";
 
 const Education: React.FC = () => {
-  const educationList = []
+  const educationList = [];
 
-  for(const i in education) {
+  for (const i in education) {
     educationList.push(
       <Experience
         key={i}
         date={education[i].date}
         name={education[i].name}
         status={education[i].status}
-    />
-    )
+      />
+    );
   }
 
-  return(
-    <div>
-      {educationList}
-    </div>
-  )
-}
+  return <div>{educationList}</div>;
+};
 
-export default Education
+export default Education;

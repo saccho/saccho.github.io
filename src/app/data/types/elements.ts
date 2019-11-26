@@ -1,7 +1,7 @@
 export type Color = {
-  color: string
-}
+  color: string;
+};
 
 export type Src = {
   src: string;
-}
+};
