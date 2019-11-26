@@ -35,4 +35,12 @@ const WithTracker = (WrappedComponent: React.FC, options = {}) => {
   return HOC;
 };
 
-export default WithTracker;
+const Event = (category: string, action: string, label: string) => {
+  GoogleAnalytics.event({
+    category: category,
+    action: action,
+    label: label
+  });
+};
+
+export { WithTracker, Event };
