@@ -1,41 +1,44 @@
-import React from 'react'
-import styled from 'styled-components'
-import SNSLink from './SNSLink'
-import my from '../data/values/myProfile'
+import React from "react";
+import styled from "styled-components";
+import SNSLink from "./SNSLink";
+import my from "../data/values/myProfile";
 
 const ItsMe: React.FC = () => {
-  const snsList = []
+  const snsList = [];
 
-  for(const i in my.sns) {
+  for (const i in my.sns) {
     snsList.push(
-      <SNSLink key={i} href={my.sns[i].href} iconURL={my.sns[i].icon} />
-    )
+      <SNSLink
+        key={i}
+        name={my.sns[i].name}
+        href={my.sns[i].href}
+        iconURL={my.sns[i].icon}
+      />
+    );
   }
 
-  return(
+  return (
     <Wrapper>
       <AboutMe>
-        <MyImg src={my.icon}/>
+        <MyImg src={my.icon} />
         <Bio>
           <Name>{my.name}</Name>
           <Status>{my.status}</Status>
-          <Links>
-            {snsList}
-          </Links>
+          <Links>{snsList}</Links>
         </Bio>
       </AboutMe>
     </Wrapper>
-  )
-}
+  );
+};
 
 /* Styles */
 const Wrapper = styled.div`
-  height: calc(100vh - (100vw - 80px)*(393/1000));
+  height: calc(100vh - (100vw - 80px) * (393 / 1000));
   display: flex;
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: 1024px) {
-    height: calc(100vh - 100vw*(393/1000) - 100px);
+    height: calc(100vh - 100vw * (393 / 1000) - 100px);
   }
   @media only screen and (max-width: 480px) {
     justify-content: start;
@@ -47,7 +50,7 @@ const Wrapper = styled.div`
     align-items: start;
     height: 190px;
   }
-`
+`;
 
 const AboutMe = styled.div`
   position: sticky;
@@ -66,13 +69,13 @@ const AboutMe = styled.div`
     text-align: center;
     display: inline-block;
   }
-`
+`;
 
 const MyImg = styled.img`
   border-radius: 50%;
   width: 150px;
   height: 150px;
-`
+`;
 
 const Bio = styled.div`
   display: flex;
@@ -80,19 +83,19 @@ const Bio = styled.div`
   justify-content: center;
   height: 100%;
   margin: 0 20px;
-`
+`;
 
 const Name = styled.h3`
   margin: 0;
-`
+`;
 
 const Status = styled.p`
   margin: 5px 0 0 0;
-`
+`;
 
 const Links = styled.div`
   text-align: center;
   margin: 20px 0 0 0;
-`
+`;
 
 export default ItsMe;

@@ -1,39 +1,38 @@
-import React from 'react'
-import styled from 'styled-components'
-import contact from '../data/values/contact'
-import { mainText, linkTextHover } from '../data/colors/elements'
-import { Color, Src } from '../data/types/elements'
+import React from "react";
+import styled from "styled-components";
+import contact from "../data/values/contact";
+import { mainText, linkTextHover } from "../data/colors/elements";
+import { Color, Src } from "../data/types/elements";
+import { Event } from "../components/GATracker";
 
 type TwitterLinkColors = Color & {
-  textHover: string
-}
+  textHover: string;
+};
 
 const Contact: React.FC = () => {
-  return(
+  return (
     <Wrapper>
       <ContactCard>
-        <h3>
-          {contact.message}
-        </h3>
+        <h3>{contact.message}</h3>
         <Mail>
-          <Icon src={contact.links.mail.icon}/>
+          <Icon src={contact.links.mail.icon} />
           <Link>{contact.links.mail.link}</Link>
         </Mail>
         <Twi
-          href='https://twitter.com/runn_622v' 
-          target='_blank'
-          rel='noopener noreferrer'
+          href={contact.links.twitter.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => Event("Contact", "Linked", contact.links.twitter.name)}
           color={mainText}
-          textHover={linkTextHover}>
-          <Icon src={contact.links.twitter.icon}/>
-          <Link color={mainText}>
-            @runn_622v
-          </Link>
+          textHover={linkTextHover}
+        >
+          <Icon src={contact.links.twitter.icon} />
+          <Link color={mainText}>@runn_622v</Link>
         </Twi>
       </ContactCard>
     </Wrapper>
-  )
-}
+  );
+};
 
 /* Styles */
 const Wrapper = styled.div`
@@ -44,38 +43,38 @@ const Wrapper = styled.div`
   @media only screen and (max-width: 1025px) {
     height: calc(100% - 100px);
   }
-`
+`;
 
 const ContactCard = styled.div`
   align-items: center;
-`
+`;
 
 const Mail = styled.div`
   display: flex;
   margin: 5px;
-`
+`;
 
 const Twi = styled.a`
   color: ${(props: TwitterLinkColors) => props.color};
   display: inline-flex;
   margin: 5px;
-  transition: .2s;
-  &:hover{
+  transition: 0.2s;
+  &:hover {
     color: ${(props: TwitterLinkColors) => props.textHover};
-    opacity: .7;
+    opacity: 0.7;
   }
-`
+`;
 
 const Icon = styled.img`
   src: url(${(props: Src) => props.src});
   width: 24px;
   height: 24px;
   margin-right: 5px;
-`
+`;
 
 const Link = styled.span`
   align-items: center;
   justify-content: center;
-`
+`;
 
-export default Contact
+export default Contact;
