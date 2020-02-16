@@ -1,13 +1,13 @@
 const experieces = [
   {
-    date: "Apr. 2019 - present",
-    name: "IEEE Shin-etsu Section Student Branch",
-    status: "Vice-Chair"
-  },
-  {
     date: "Jun 2019 - present",
     name: "Fuller, Inc.",
     status: "Part-time Job (Android Engineer)"
+  },
+  {
+    date: "Apr. 2019 - Dec. 2019",
+    name: "IEEE Shin-etsu Section Student Branch",
+    status: "Vice-Chair"
   },
   {
     date: "Apr. 2019 - May 2019",
