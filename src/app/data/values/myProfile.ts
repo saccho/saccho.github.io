@@ -6,7 +6,7 @@ import signate from "../../../assets/icons/signate.png";
 
 const profile = {
   name: "Satoru Yasukawa / 安川 悟",
-  status: "Student at Niigata University",
+  status: "Software Engineer at Yahoo! JAPAN",
   icon: itsme,
   sns: [
     {
