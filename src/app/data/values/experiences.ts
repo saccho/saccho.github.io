@@ -1,6 +1,11 @@
 const experieces = [
   {
-    date: "Jun 2019 - present",
+    date: "Apr. 2020 - present",
+    name: "Yahoo Japan Corporation",
+    status: "Software engineer"
+  },
+  {
+    date: "Jun 2019 - Mar. 2020",
     name: "Fuller, Inc.",
     status: "Part-time Job (Android Engineer)"
   },
