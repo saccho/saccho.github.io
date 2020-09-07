@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b0bc02f04906738706d8bdbd6e8a8ab",
+    "revision": "9dc67515c94303e582164058895e5bd0",
     "url": "/index.html"
   },
   {
-    "revision": "0121dca4b34ce56da339",
+    "revision": "1a8b1e4ac66aa36da59b",
     "url": "/static/css/main.995785cc.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.c015b8b1.chunk.js"
   },
   {
-    "revision": "0121dca4b34ce56da339",
-    "url": "/static/js/main.975f5d61.chunk.js"
+    "revision": "1a8b1e4ac66aa36da59b",
+    "url": "/static/js/main.44d4ce9a.chunk.js"
   },
   {
     "revision": "771d808465f0f264042e",
@@ -40,12 +40,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/css.ac8bc266.svg"
   },
   {
+    "revision": "e3f14265b33666145b5c3e90dff2794a",
+    "url": "/static/media/dart.e3f14265.svg"
+  },
+  {
     "revision": "c9674de227a5c15a66d117c1032ce736",
     "url": "/static/media/dl.c9674de2.svg"
   },
   {
     "revision": "fd8b64d4de5a071f2a5cbac2e2594f56",
     "url": "/static/media/firebase.fd8b64d4.svg"
+  },
+  {
+    "revision": "97225287851eed3c193b4e154ae29a47",
+    "url": "/static/media/flutter.97225287.svg"
   },
   {
     "revision": "d90bff824a0e32140232f563fcf502a2",
@@ -76,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/itsme.a344e086.jpg"
   },
   {
-    "revision": "8e47a53be55165f60c0b9b86422b1410",
-    "url": "/static/media/java.8e47a53b.svg"
+    "revision": "bac23e3ca52cad00b6f2bb06d6a1c6a5",
+    "url": "/static/media/java.bac23e3c.svg"
   },
   {
     "revision": "6719bb6d2667c67c1bbc9f1d7d81452b",
@@ -132,8 +140,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/rust.682dfa52.svg"
   },
   {
-    "revision": "2146449e0d92bc418203564baf0b86bd",
-    "url": "/static/media/scala.2146449e.svg"
+    "revision": "802c5f88344bf300439c190975e2a5ac",
+    "url": "/static/media/scala.802c5f88.svg"
   },
   {
     "revision": "aa6507d33da86db64ecacbde90e1935e",
