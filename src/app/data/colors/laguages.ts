@@ -1,5 +1,13 @@
-const frameWorkColor = "#2C3E50";
+const frameWorkColor = "#2C3E50"
 const languages = {
+  scala: {
+    name: "Scala",
+    color: "#C22D40"
+  },
+  java: {
+    name: "Java",
+    color: "#B07219"
+  },
   python: {
     name: "Python",
     color: "#3572A5"
@@ -44,6 +52,6 @@ const languages = {
     name: "React",
     color: frameWorkColor
   }
-};
+}
 
-export default languages;
+export default languages
