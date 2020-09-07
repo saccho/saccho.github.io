@@ -1,5 +1,9 @@
-const frameWorkColor = "#2C3E50"
+const frameWorkColor = "#2C3E50";
 const languages = {
+  dart: {
+    name: "Dart",
+    color: "#00B4AB"
+  },
   scala: {
     name: "Scala",
     color: "#C22D40"
@@ -51,7 +55,11 @@ const languages = {
   react: {
     name: "React",
     color: frameWorkColor
+  },
+  flutter: {
+    name: "Flutter",
+    color: frameWorkColor
   }
-}
+};
 
-export default languages
+export default languages;

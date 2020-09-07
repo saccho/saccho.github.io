@@ -11,8 +11,10 @@ import { ReactComponent as HTMLIcon } from "../../../assets/icons/skills/html.sv
 import { ReactComponent as CSSIcon } from "../../../assets/icons/skills/css.svg";
 import { ReactComponent as JavaIcon } from "../../../assets/icons/skills/java.svg";
 import { ReactComponent as ScalaIcon } from "../../../assets/icons/skills/scala.svg";
+import { ReactComponent as DartIcon } from "../../../assets/icons/skills/dart.svg";
 import { ReactComponent as VueIcon } from "../../../assets/icons/skills/vue.svg";
 import { ReactComponent as ReactIcon } from "../../../assets/icons/skills/react.svg";
+import { ReactComponent as FlutterIcon } from "../../../assets/icons/skills/flutter.svg";
 import { ReactComponent as GitIcon } from "../../../assets/icons/skills/git.svg";
 import { ReactComponent as GithubIcon } from "../../../assets/icons/skills/github.svg";
 import { ReactComponent as GCPIcon } from "../../../assets/icons/skills/gcp.svg";
@@ -30,6 +32,12 @@ const skills = {
       level: 4,
       color: languages.go.color,
       icon: GoIcon
+    },
+    {
+      name: languages.dart.name,
+      level: 4,
+      color: languages.dart.color,
+      icon: DartIcon
     },
     {
       name: languages.scala.name,
@@ -93,6 +101,12 @@ const skills = {
     }
   ],
   libraries: [
+    {
+      name: languages.flutter.name,
+      level: 4,
+      color: languages.flutter.color,
+      icon: FlutterIcon
+    },
     {
       name: languages.vue.name,
       level: 3,
